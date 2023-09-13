@@ -1,38 +1,129 @@
-.App {
+#root {
+  background-color: #13172C;
+  background-size: 20px 20px;
+  background-image:
+    linear-gradient(to right, rgba(255, 0, 0, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 0, 0, 0.1) 1px, transparent 1px);
+  color: #DFE0E3;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100vh;
+  width: 100vw;
+  font-family: "NowBold";
+}
+
+/* ..:: HEADER ::.. */
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding-bottom: 5px;
+  background-color: #13172C;
+}
+
+.topbar--menu {
+  display: flex;
+  column-gap: 1vw;
+  margin-right: 1vw;
+}
+.logo-text {
+  margin: 0;
+  font-size: 3vh;
+  letter-spacing: 0.5vw;
+  text-align: center;
+  min-width: 300px;
+}
+/* ..:: SEARCH ::.. */
+
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  cursor: default;
+  margin-bottom: 1vh;
+}
+
+
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1vw;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.search-input {
+  height: 30px;
+  width: 100%;
+  min-width: 200px;
+  max-width: 300px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-button {
+  height: 100%;
+  width: 5vw;
+  min-width: 100px;
+  max-width: 200px;
+  font-weight: 700;
+  color: #DFE0E3;
+  background-color: #13172C;
+  border: 1px solid #DFE0E3;
+  margin: 1px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.search-button:hover {
+  background-color: blue;
+  letter-spacing: 1px;
 }
 
-.App-link {
-  color: #61dafb;
+.search-nav {
+  height: 2vh;
+  min-height: 30px;
+  margin-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ..:: DONORS BOX ::.. */
+
+.sponsors {
+  width: 30vw;
+  min-width: 300px;
+  max-width: 500px;
+  margin: 1vh auto;
+  background-color: #13172C;
+  border: 1px solid #DFE0E3;
+  padding: 5px;
+}
+
+.sponsors-box > p {
+  margin: 0;
+  text-align: left;
+}
+
+.sponsors-box > p:hover {
+  background: blue;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+/* ..:: FOOTER ::.. */
+
+/* TO DO:
+[x] Center
+*/
+
+footer {
+  position: absolute;
+  bottom: 0.5vh;
+  width: 100%;
+  text-align: center;
+  background-color: #13172C;
+  padding: 5px 0;
 }
