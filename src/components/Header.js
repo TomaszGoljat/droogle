@@ -6,7 +6,7 @@ export default function Header() {
         <header>
             <div className='topbar--menu'>
                 <span>Tools</span>
-                <span>Donate</span>
+                <span>Donate now</span>
                 <span>?</span>
             </div>
         </header>
