@@ -13,6 +13,16 @@
   font-family: "NowBold";
 }
 
+a {
+  color:#DFE0E3;
+  text-decoration: none;
+}
+
+a:hover {
+  color: blue;
+  letter-spacing: 2px;
+}
+
 /* ..:: HEADER ::.. */
 
 header {
