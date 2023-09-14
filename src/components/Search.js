@@ -10,7 +10,7 @@ import axios from "axios";
 
 export default function Search() {
 
-    const url = "http://localhost:8888/.netlify/functions/shroomery-fetch/shroomery-fetch.js"
+    const url = "/.netlify/functions/shroomery-fetch/shroomery-fetch.js"
 
     /*
     const fetchResult = async function simpleFetch() {
