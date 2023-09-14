@@ -76,6 +76,10 @@ This one worked
             <button className="search-button">erowid</button>
             <button className="search-button">drugsforum</button>
             <button className="search-button">other</button>
+        </div><div>
+            {results.map(el => {
+                return <p><a href={el[1]}>{el[0]}</a></p>
+            })}
         </div>
         </div>
     )
