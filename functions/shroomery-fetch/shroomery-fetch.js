@@ -3,7 +3,6 @@
 const axios = require("axios")
 const cheerio = require("cheerio")
 
-const url = "https://www.shroomery.org/forums/dosearch.php?where=body&tosearch=both&how=all&words=grow+box"
 
 //const result = axios.get(url)
 async function scrap() {
@@ -13,6 +12,10 @@ async function scrap() {
 
 
 exports.handler = async function (event, context) {
+  console.log(event.queryStringParameters.keyword)
+  const keyword = event.queryStringParameters.keyword
+  const url = `https://www.shroomery.org/forums/dosearch.php?where=body&tosearch=both&how=all&words=${keyword}`
+  console.log(url)
   const response = await axios.get(url);
   //const searchResults = response.data;
   // Let's load the html from response:

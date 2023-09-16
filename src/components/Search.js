@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import axios from "axios";
+import Results from "./Results";
 
 /*
 * Search Component display searchbox and search buttons.
@@ -10,21 +11,7 @@ import axios from "axios";
 
 export default function Search() {
 
-    const url = "/.netlify/functions/shroomery-fetch/shroomery-fetch.js"
-
-    /*
-    const fetchResult = async function simpleFetch() {
-        const response = await axios.get(url)
-        return response.data.body
-    }
-    
-This one worked
-    const GetResults = async () => {
-        let { data } = await axios.get(url);
-        console.log(data)
-    }
-*/
-
+    const url = "/.netlify/functions/shroomery-fetch/shroomery-fetch.js?keyword=paracetamol+ibuprofen"
 
     const [results, setResults] = React.useState([]);
     const [error, setError] = React.useState(false);
@@ -76,11 +63,8 @@ This one worked
             <button className="search-button">erowid</button>
             <button className="search-button">drugsforum</button>
             <button className="search-button">other</button>
-        </div><div>
-            {results.map(el => {
-                return <p><a href={el[1]}>{el[0]}</a></p>
-            })}
         </div>
+        {state === 'loading' ? "Loading..." : <Results results={results} />}
         </div>
     )
     

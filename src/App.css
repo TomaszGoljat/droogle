@@ -18,11 +18,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: blue;
-  letter-spacing: 2px;
-}
-
 /* ..:: HEADER ::.. */
 
 header {
@@ -121,6 +116,24 @@ header {
   background: blue;
   cursor: pointer;
   letter-spacing: 1px;
+}
+
+/* ..:: SHROOMERY ::.. */
+.shroomery-results {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+}
+
+.shroomery-results > a:hover {
+  text-decoration: none;
+  letter-spacing: normal;
+  color: white;
+}
+
+.single-result {
+  border: 1px solid white;
 }
 
 /* ..:: FOOTER ::.. */
