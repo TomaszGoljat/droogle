@@ -11,16 +11,45 @@ import Results from "./Results";
 
 export default function Search() {
 
-    const url = "/.netlify/functions/shroomery-fetch/shroomery-fetch.js?keyword=paracetamol+ibuprofen"
+    const url = "/.netlify/functions/fetch-results/fetch-results.js"
 
     const [results, setResults] = React.useState([]);
     const [error, setError] = React.useState(false);
     const [state, setState] = React.useState('');
+    const [source, setSource] = React.useState('')
 
-    function fetchResults() {
+    const [tempQuery, setTempQuery] = React.useState("")
+    const [query, setQuery] = React.useState("")
+
+    function grabQuery(event) {
+        setTempQuery(event.target.value)
+    }
+
+    useEffect(() => {
+        const timeoutId = setTimeout(() => setQuery(tempQuery), 500)
+        return () => clearTimeout(timeoutId)
+    }, [tempQuery])
+    
+    
+
+    useEffect(() => {
+       // ..:: fetchResults() - calling fetch-results.js 
+
+        function fetchResults() {
+
+        console.log(`Current Query: ${query}`)
+
+        const params = {
+            keywords: query,
+            source: source
+        }
+
+    
         setState('loading')
         axios
-            .get(url)
+            .get(url, {
+                params: params
+            })
             .then((res) => {
                 console.log(res)
                 setState('success')
@@ -32,39 +61,27 @@ export default function Search() {
                 setError(err)
             })
     }
-
-    useEffect(() => {
         fetchResults();
-    }, [])
+    }, [source, query])
 
     if(state === 'error')
         return (
     <h1>{error.toString()}</h1>
     );
-/*
-    return (
-        <div>
-            {results.map(el => {
-                return <p><a href={el[1]}>{el[0]}</a></p>
-            })}
-        </div>
-    )
-*/
-    
 
         return (
         <div className="search">
         <div className="search-box">
-            <input type="text" className="search-input" />
+            <input type="text" placeholder="Search for..." className="search-input" onChange={grabQuery}/>
         </div>
         <div className="search-nav">
-            <button className="search-button">shroomery</button>
-            <button className="search-button">bluelight</button>
-            <button className="search-button">erowid</button>
+            <button className="search-button" onClick={() => setSource('shroomery')}>shroomery</button>
+            <button className="search-button" onClick={() => setSource('bluelight')}>bluelight</button>
+            <button className="search-button" onClick={() => setSource('erowid')}>erowid</button>
             <button className="search-button">drugsforum</button>
-            <button className="search-button">other</button>
+            <button className="search-button" onClick={() => setSource('dmtnexus')}>dmtnexus</button>
         </div>
-        {state === 'loading' ? "Loading..." : <Results results={results} />}
+        {state === 'loading' ? "Loading..." : <Results results={results} source={source} />}
         </div>
     )
     

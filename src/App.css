@@ -118,22 +118,21 @@ header {
   letter-spacing: 1px;
 }
 
-/* ..:: SHROOMERY ::.. */
-.shroomery-results {
+/* ..:: RESULTS ::.. */
+
+.results-div {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  border: 1px solid #DFE0E3;
+  background-color: #13172C;
   text-align: left;
+  padding: 2px 5px;
+  margin-top: 1vh;
 }
 
-.shroomery-results > a:hover {
-  text-decoration: none;
-  letter-spacing: normal;
-  color: white;
-}
-
-.single-result {
-  border: 1px solid white;
+.single-result:hover {
+  padding: 1px 0;
+  background-color: blue;
 }
 
 /* ..:: FOOTER ::.. */
