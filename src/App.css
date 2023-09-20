@@ -138,16 +138,18 @@ header {
 
 
 /* ..:: Shroomery ::.. */
+/* ..:: Erowid ::.. */
 
-.shroomery--singleResult {
+.shroomery--singleResult, .erowid--singleResult {
   background-color: #13172C;
   border: 1px solid rgba(223, 224, 227, 0.2);
   padding: 5px;
   margin: 0 5vw;
   width: 90vw;
+  font-size: 120%;
 }
 
-.shroomery--singleResult:hover {
+.shroomery--singleResult:hover, .erowid--singleResult:hover {
   background-color: blue;
 }
 
@@ -156,9 +158,13 @@ header {
   font-size: 80%;
 }
 
-.shroomery--hr {
+.shroomery--hr, .erowid--hr {
   border: 1px solid rgba(223, 224, 227, 0.2);
   width: 100%;
+}
+
+.erowid--description {
+  font-size: 80%;
 }
 
 /* ..:: DuckDuckGo ::.. */
@@ -176,7 +182,7 @@ header {
   background-color: blue;
 }
 
-.ddg--description {
+.ddg--description, .erowid--description {
   font-size: 80%;
 }
 
