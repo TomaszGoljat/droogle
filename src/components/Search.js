@@ -78,7 +78,6 @@ export default function Search() {
             <button className="search-button" onClick={() => setSource('shroomery')}>shroomery</button>
             <button className="search-button" onClick={() => setSource('bluelight')}>bluelight</button>
             <button className="search-button" onClick={() => setSource('erowid')}>erowid</button>
-            <button className="search-button">drugsforum</button>
             <button className="search-button" onClick={() => setSource('dmtnexus')}>dmtnexus</button>
         </div>
         {state === 'loading' ? "Loading..." : <Results results={results} source={source} />}

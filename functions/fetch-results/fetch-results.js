@@ -3,10 +3,11 @@
 const axios = require("axios")
 const cheerio = require("cheerio")
 
-
+// https://bluelight.org/xf/threads/dxm.78090/
+                  
 exports.handler = async function (event, context) {
   /* Getting informations from event: */
-  const keywords = event.queryStringParameters.keywords
+  const keywords = event.queryStringParameters.keywords.replace(/[^\w\s]/gi, '')
   const source = event.queryStringParameters.source
   const ddgUrl = 'https://html.duckduckgo.com/html/'
 
@@ -74,14 +75,16 @@ exports.handler = async function (event, context) {
       case 'bluelight':
       case 'dmtnexus':
         console.log(params)
-        const titles = $(".result__a")
-        const links = $(".result__url")
-        const descriptions = $(".result__snippet")
-        for (let i = 0; i < titles.length; i++) {
+        const ddgTitles = $(".result__a")
+        const ddgLinks = $(".result__url")
+        const ddgDescriptions = $(".result__snippet")
+        for (let i = 0; i < ddgTitles.length; i++) {
           // Preparing values:
           const blTag = /\| Bluelight.org/
-          //const title = $(titles[i]).text()
-          resultsTable.push([$(titles[i]).text().replace(blTag, ""), $(links[i]).text().replace(" ", ""), $(descriptions[i]).text()])
+          const ddgTitle = $(ddgTitles[i]).text()
+          const ddgLink = $(ddgLinks[i]).text().replace(/\s/g, "")
+          const ddgDescription = $(ddgDescriptions[i]).text()
+          resultsTable.push([ddgTitle, ddgLink, ddgDescription])
         }
         console.log(resultsTable)
         break;
