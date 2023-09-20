@@ -12,9 +12,17 @@ export default function Results(props) {
     */
    
    // Shroomery:
+   // resultsTable[title, title-url, subforum, subforum-url, date]
    const Shroomery = (props) => {
+        const shroomeryDate = -Math.round((Date.parse(props.date) - Date.now()) / (1000 * 60 * 60 * 24))
        return (
-           <a href={props.link} className="single-result--ahref" target="_blank" rel="noreferrer"><div className="single-result">{props.title}</div></a>
+        <div className="shroomery--singleResult">
+           <a href={props.link} className="shroomery--link" target="_blank" rel="noreferrer">
+            <div className="shroomery--title">{props.title}</div></a>
+            <hr className="shroomery--hr"/>
+            <div className="shroomery--secondRow">posted {shroomeryDate} days ago in 
+            <a href={props.subforumUrl}>{props.subforum}</a></div>
+        </div>
            )
         }
                    
@@ -23,10 +31,11 @@ export default function Results(props) {
     
     const DuckDuckGo = (props) => {
         return (
-            <div className="single-result--ddg">
-                <a href={`https://${props.link}`} target="_blank" rel="noreferrer">{props.title}</a>
-                <p>{props.description}</p>
-            </div>
+<a href={`https://${props.link}`} target="_blank" rel="noreferrer">
+            <div className="ddg--singleResult">
+                {props.title}
+                <p className="ddg--description">{props.description}</p>
+            </div></a>
         )
     }
     
@@ -40,6 +49,16 @@ export default function Results(props) {
             </div>
         )
     }
+
+    /*
+    * ..:: END OF Single Result components
+    */
+
+    // ..:: Label Component ::..
+
+    const Label = (props) => {
+        return <span className="results--label">You are searching: {props.source}</span>
+    }
     
     
     // ..:: Rendering Results ::..
@@ -50,11 +69,21 @@ export default function Results(props) {
             break;
         // ..:: Shroomery ::..
         case 'shroomery':
-            renderResults = props.results.map(result => <Shroomery link={result[1]} title={result[0]} />)
+            renderResults = props.results.map(result => <Shroomery 
+            link={result[1]} 
+            title={result[0]} 
+            subforum={result[2]} 
+            subforumUrl={result[3]} 
+            date={result[4]} 
+            />)
             break;
         // ..:: Erowid ::..
         case 'erowid':
-            renderResults = props.results.map(result => <Erowid link={result[1]} title={result[0]} description={result[2]} />)
+            renderResults = props.results.map(result => <Erowid 
+                link={result[1]} 
+                title={result[0]} 
+                description={result[2]} 
+                />)
             break;
             // ..:: DuckDuckGo ::..
             // ..:: BlueLight, DMT-Nexus ::..
@@ -66,8 +95,8 @@ export default function Results(props) {
     }
 
     return (
-        <div className="results-div">
-            <span className="source-label">{props.source}</span>
+        <div className="results--div">
+           {props.source ? <Label source={props.source} /> : ""}
             {renderResults}
         </div>
     )

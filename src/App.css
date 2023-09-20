@@ -8,7 +8,8 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   width: 100vw;
   font-family: "NowBold";
 }
@@ -120,19 +121,62 @@ header {
 
 /* ..:: RESULTS ::.. */
 
-.results-div {
+.results--div {
   display: flex;
   flex-direction: column;
-  border: 1px solid #DFE0E3;
-  background-color: #13172C;
   text-align: left;
-  padding: 2px 5px;
+  padding: 0;
   margin-top: 1vh;
+  gap: 1vh;
+  align-items: center;
 }
 
-.single-result:hover {
-  padding: 1px 0;
+.results--label {
+  font-size: 130%;
+}
+
+
+
+/* ..:: Shroomery ::.. */
+
+.shroomery--singleResult {
+  background-color: #13172C;
+  border: 1px solid rgba(223, 224, 227, 0.2);
+  padding: 5px;
+  margin: 0 5vw;
+  width: 90vw;
+}
+
+.shroomery--singleResult:hover {
   background-color: blue;
+}
+
+.shroomery--secondRow {
+  text-align: right;
+  font-size: 80%;
+}
+
+.shroomery--hr {
+  border: 1px solid rgba(223, 224, 227, 0.2);
+  width: 100%;
+}
+
+/* ..:: DuckDuckGo ::.. */
+
+.ddg--singleResult {
+  background-color: #13172C;
+  border: 1px solid rgba(223, 224, 227, 0.2);
+  padding: 5px;
+  font-size: 120%;
+  margin: 0 5vw;
+}
+
+.ddg--singleResult:hover {
+  background-color: blue;
+}
+
+.ddg--description {
+  font-size: 80%;
 }
 
 /* ..:: FOOTER ::.. */
@@ -142,7 +186,7 @@ header {
 */
 
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0.5vh;
   width: 100%;
   text-align: center;

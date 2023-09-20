@@ -52,15 +52,25 @@ exports.handler = async function (event, context) {
     const $ = cheerio.load(response.data)
     // Selecting actual results:
     var resultsTable = []
-    var resultsList = []
     switch (source) {
+    // ..:: Shroomery ::..
+    // resultsTable[title, title-url, subforum, subforum-url, date]
       case 'shroomery':
-        resultsList = $(".pp")
+        const shroomeryTitles = $(".pp")
+        const shroomerySubforums = $(".darktable.wrap.forumrow a")
+        const shroomeryDate = $(".darktable.wrap.postedrow")
         // Creating table to send to front end
-        resultsList.each((idx, el) => {
-          resultsTable.push([$(el).text(), $(el).attr('href')])
-        })
+       for (let i = 0; i < shroomeryTitles.length; i++) {
+        console.log($(shroomeryTitles[i]).text(), $(shroomerySubforums[i]).text(), $(shroomeryDate[i]).text())
+        resultsTable.push([$(shroomeryTitles[i]).text(), 
+        $(shroomeryTitles[i]).attr('href'), 
+        $(shroomerySubforums[i]).text(),
+        $(shroomerySubforums[i]).attr('href'),
+        $(shroomeryDate[i]).text()])
+       }
         break;
+      // ..:: DuckDuckGo ::..
+      // resultsTable[title, title-url, description]
       case 'bluelight':
       case 'dmtnexus':
         console.log(params)
@@ -69,12 +79,13 @@ exports.handler = async function (event, context) {
         const descriptions = $(".result__snippet")
         for (let i = 0; i < titles.length; i++) {
           // Preparing values:
-          const blTag = /\ Bluelight.org/
+          const blTag = /\| Bluelight.org/
           //const title = $(titles[i]).text()
           resultsTable.push([$(titles[i]).text().replace(blTag, ""), $(links[i]).text().replace(" ", ""), $(descriptions[i]).text()])
         }
         console.log(resultsTable)
         break;
+      // ..:: Erowid ::..
         case 'erowid':
           const erowidTitles = $(".result-title")
           const erowidUrls = $(".result-title a")
