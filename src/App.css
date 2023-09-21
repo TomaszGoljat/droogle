@@ -34,6 +34,7 @@ header {
   width: 100%;
   padding-bottom: 5px;
   background-color: var(--bg-color);
+  font-size: 80%;
 }
 
 .topbar--menu {
@@ -109,24 +110,30 @@ header {
 /* ..:: DONORS BOX ::.. */
 
 .sponsors {
-  width: 30vw;
-  min-width: 300px;
-  max-width: 500px;
-  margin: 1vh auto;
-  background-color: var(--bg-color);
-  border: 1px solid var(--text-color);
-  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  margin-bottom: 5px;
 }
 
-.sponsors-box > p {
+.sponsors--marquee {
+  background-color: blue;
+}
+
+.sponsor--div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+
+.sponsor--title, .sponsor--desc {
   margin: 0;
-  text-align: left;
+  font-size: 90%;
 }
 
-.sponsors-box > p:hover {
-  background: blue;
-  cursor: pointer;
-  letter-spacing: 1px;
+.sponsor--desc {
+  font-size: 65%;
 }
 
 /* ..:: RESULTS ::.. */
