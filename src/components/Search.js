@@ -34,6 +34,11 @@ export default function Search() {
         const timeoutId = setTimeout(() => setQuery(tempQuery), 500)
         return () => clearTimeout(timeoutId)
     }, [tempQuery])
+
+
+    // ..:: Loading Animation ::..
+
+    const Loading = () => <div className="ring">Loading<span className="loading"></span></div>
     
     
 
@@ -77,7 +82,7 @@ export default function Search() {
         return (
         <div className="search">
         <div className="search--box">
-            <input type="text" placeholder="Search for..." className="search--input" onChange={grabQuery}/>
+            <input type="search" placeholder="Search for..." className="search--input" onChange={grabQuery}/>
         </div>
         <div className="search--nav">
             <button className="search--button" onClick={() => setSource('erowid')}><img src={favErowid} alt="Erowid favicon"/> erowid</button>
@@ -85,7 +90,7 @@ export default function Search() {
             <button className="search--button" onClick={() => setSource('shroomery')}><img src={favShroomery} alt="Shroomery favicon" /> shroomery</button>
             <button className="search--button" onClick={() => setSource('bluelight')}><img src={favDDG} alt="DuckDuckGo favicon" /> bluelight</button>
         </div>
-        {state === 'loading' ? "Loading..." : <Results results={results} source={source} />}
+        {state === 'loading' ? <Loading /> : <Results results={results} source={source} />}
         </div>
     )
     
