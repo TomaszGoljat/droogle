@@ -2,6 +2,11 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import Results from "./Results";
 
+// Importing Favicons:
+import favDDG from "./icons/duckduckgo.png"
+import favErowid from "./icons/erowid.png"
+import favShroomery from "./icons/shroomery.png"
+
 /*
 * Search Component display searchbox and search buttons.
 * Takes the input and when clicked on search button - sends it to chosen search component to fetch and display.
@@ -71,14 +76,14 @@ export default function Search() {
 
         return (
         <div className="search">
-        <div className="search-box">
-            <input type="text" placeholder="Search for..." className="search-input" onChange={grabQuery}/>
+        <div className="search--box">
+            <input type="text" placeholder="Search for..." className="search--input" onChange={grabQuery}/>
         </div>
-        <div className="search-nav">
-            <button className="search-button" onClick={() => setSource('shroomery')}>shroomery</button>
-            <button className="search-button" onClick={() => setSource('bluelight')}>bluelight</button>
-            <button className="search-button" onClick={() => setSource('erowid')}>erowid</button>
-            <button className="search-button" onClick={() => setSource('dmtnexus')}>dmtnexus</button>
+        <div className="search--nav">
+            <button className="search--button" onClick={() => setSource('erowid')}><img src={favErowid} alt="Erowid favicon"/> erowid</button>
+            <button className="search--button" onClick={() => setSource('dmtnexus')}><img src={favDDG} alt="DuckDuckGo favicon" /> dmtnexus</button>
+            <button className="search--button" onClick={() => setSource('shroomery')}><img src={favShroomery} alt="Shroomery favicon" /> shroomery</button>
+            <button className="search--button" onClick={() => setSource('bluelight')}><img src={favDDG} alt="DuckDuckGo favicon" /> bluelight</button>
         </div>
         {state === 'loading' ? "Loading..." : <Results results={results} source={source} />}
         </div>
