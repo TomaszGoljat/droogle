@@ -12,6 +12,7 @@
   min-height: 100vh;
   width: 100vw;
   font-family: "NowBold";
+  font-size: 1rem;
 }
 
 a {
@@ -36,7 +37,7 @@ header {
 }
 .logo-text {
   margin: 0;
-  font-size: 3vh;
+  font-size: 500%;
   letter-spacing: 0.5vw;
   text-align: center;
   min-width: 300px;
@@ -199,4 +200,5 @@ footer {
   text-align: center;
   background-color: #13172C;
   padding: 5px 0;
+  font-size: 80%;
 }
