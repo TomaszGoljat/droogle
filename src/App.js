@@ -1,18 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './components/Header';
 import Search from './components/Search';
-import Footer from './components/Footer';
-import Sponsors from './components/Sponsors';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
 
 function App() {
   return (
-    <>
-    <Header />
-    <Sponsors />
-    <Search />
-    <Footer />
-    </>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Search />} />
+      </Route>
+    </Routes>
+    </BrowserRouter>
   );
 }
 

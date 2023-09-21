@@ -10,6 +10,14 @@ import favShroomery from "./icons/shroomery.png"
 /*
 * Search Component display searchbox and search buttons.
 * Takes the input and when clicked on search button - sends it to chosen search component to fetch and display.
+
+Sources to add:
+forums.ayahuasca.com (internal)
+specific subreddits (ddg):
+ - r/dxm/
+ - ...
+ leafly?
+
 */
 
 

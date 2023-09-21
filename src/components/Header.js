@@ -1,4 +1,5 @@
 import React from 'react';
+import Sponsors from './Sponsors';
 
 export default function Header() {
     return (
@@ -10,6 +11,7 @@ export default function Header() {
                 <span>?</span>
             </div>
         </header>
+        <Sponsors />
             <h1 className="logo-text">DROOGLE.INFO</h1>
             </>
     )

@@ -1,11 +1,8 @@
 import React from "react";
+import Marquee from "react-fast-marquee";
 
 export default function Sponsors() {
     return (
-        <div className="sponsors">
-        <div className="sponsors-box">
-                <p>ZAMNESIA</p>
-        </div>
-        </div>
+        <Marquee>This month supporters: Zamnesia, BigPharma, YoMama, Elon Musk, Joe Rogan, Pan Tadeusz...</Marquee>
     )
 }

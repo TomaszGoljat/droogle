@@ -1,14 +1,15 @@
 :root {
   --bg-color: rgba(19, 23, 44, 1);
+  --cardbg-color: rgba(223, 224, 227, 0.05);
   --text-color: rgba(223, 224, 227, 1);
 }
 
 #root {
   background-color: var(--bg-color);
-  background-size: 20px 20px;
-  background-image:
-    linear-gradient(to right, rgba(255, 0, 0, 0.2) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 15px 15px;
+   background-image:
+    linear-gradient(to right, rgba(0, 0, 255, 0.17) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 255, 0.15) 1px, transparent 1px);
   color: var(--text-color);
   display: flex;
   flex-direction: column;
@@ -153,7 +154,7 @@ header {
 /* ..:: Erowid ::.. */
 
 .shroomery--singleResult, .erowid--singleResult {
-  background-color: var(--bg-color);
+  background-color: var(--cardbg-color);
   border: 1px solid rgba(223, 224, 227, 0.2);
   padding: 5px;
   margin: 0 5vw;
@@ -182,7 +183,7 @@ header {
 /* ..:: DuckDuckGo ::.. */
 
 .ddg--singleResult {
-  background-color: var(--bg-color);
+  background-color: var(--cardbg-color);
   border: 1px solid rgba(223, 224, 227, 0.2);
   padding: 5px;
   font-size: 120%;
