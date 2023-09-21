@@ -16,8 +16,8 @@ export default function Sponsors() {
 
     return (
         <div className="sponsors">
-            <div>Supporters: </div>
-            <Marquee pauseOnHover={true} autoFill={true} className="sponsors--marquee">
+            <div className="sponsors--supporters">Supporters: </div>
+            <Marquee pauseOnHover={true} autoFill={true} speed={30} gradient={true} gradientColor={[0, 0, 139]} gradientWidth="5vw" className="sponsors--marquee">
                 <Sponsor title="Zamnesia" url="zamnesia.com" description="Shop at Zamnesia.com" />
                 <Sponsor title="Azarius" url="zamnesia.com" description="Shop at Azarius.com" />
                 <Sponsor title="Elon Musk" url="zamnesia.com" description="Buy Tesla" />

@@ -113,8 +113,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blue;
+  background-color: darkblue;
   margin-bottom: 5px;
+}
+
+.sponsors--supporters {
+  font-size: 80%;
 }
 
 .sponsors--marquee {
