@@ -1,18 +1,21 @@
 import React from 'react';
 import Sponsors from './Sponsors';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
     return (
             <>
         <header>
             <div className='topbar--menu'>
-                <span>Tools</span>
-                <span>Donate now</span>
-                <span>?</span>
+                <Link to="/vendors">Vendors</Link>
+                <Link to="/tools">Tools</Link>
+                <Link to="/support">Support</Link>
+                <Link to="/info">?</Link>
             </div>
         </header>
         <Sponsors />
-            <h1 className="logo-text">DROOGLE.INFO</h1>
+            <Link to="/" className='logo--text'>DROOGLE.INFO</Link>
+            <p className='logo--description'>privacy focused harm reduction search</p>
             </>
     )
 }

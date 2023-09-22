@@ -42,12 +42,19 @@ header {
   column-gap: 1vw;
   margin-right: 1vw;
 }
-.logo-text {
+.logo--text {
   margin: 0;
   font-size: 200%;
   letter-spacing: 0.5vw;
   text-align: center;
   min-width: 300px;
+}
+
+.logo--description {
+  font-size: 70%;
+  text-align: center;
+  margin-top: 0;
+  letter-spacing: 3px;
 }
 /* ..:: SEARCH ::.. */
 
@@ -105,6 +112,8 @@ header {
   display: flex;
   gap: 5px;
   min-height: 30px;
+  flex-wrap: wrap;
+  margin: 0, 5px;
 }
 
 /* ..:: DONORS BOX ::.. */
