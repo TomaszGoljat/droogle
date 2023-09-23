@@ -299,6 +299,22 @@ footer > p {
   width: 30px;
 }
 
+.tools--label {
+  padding: 10px;
+  background-color: var(--cardbg-color);
+  border-radius: 3%;
+  border: 1px solid orange;
+}
+
+/*
+* ..:: CBD ::..
+*/
+
+.cbd--div {
+  display: flex;
+  flex-direction: column;
+}
+
 /* ..:: Pet CBD ::.. */
 
 .petCBD--div {
@@ -345,6 +361,30 @@ footer > p {
   margin: auto;
   max-width: 50vw;
   font-size: 80%;
+}
+
+
+/* ..:: VolumeOilSimpleCBD ::.. */
+.VOSCBD--div {
+  margin: auto;
+  max-width: 80vw;
+}
+
+.VOSCBD--columns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.VOSCBD--result {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.VOSCBD--result > p {
+  padding: 0;
+  margin: 0;
 }
 
 /* ..:: LOADING ::.. */

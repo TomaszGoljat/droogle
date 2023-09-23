@@ -7,6 +7,7 @@ export default function Header() {
             <>
         <header>
             <div className='topbar--menu'>
+                <Link to="/" className='topbar--link'>Search</Link>
                 <Link to="/vendors" className='topbar--link'>Vendors</Link>
                 <Link to="/tools" className='topbar--link'>Tools</Link>
                 <Link to="/support" className='topbar--link'>Support</Link>
@@ -15,7 +16,7 @@ export default function Header() {
         </header>
         <Sponsors />
             <Link to="/" className='logo--text'>DROOGLE.INFO</Link>
-            <p className='logo--description'>privacy focused harm reduction search</p>
+            <p className='logo--description'>privacy focused harm reduction tools</p>
             </>
     )
 }
