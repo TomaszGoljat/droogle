@@ -1,6 +1,7 @@
 :root {
   --bg-color: rgba(19, 23, 44, 1);
   --cardbg-color: rgba(223, 224, 227, 0.05);
+  --cardborder-color: rgba(223, 224, 227, 1);
   --text-color: rgba(223, 224, 227, 1);
 }
 
@@ -19,6 +20,24 @@
   width: 100vw;
   font-family: "NowBold";
   font-size: 16px;
+}
+
+/*
+*
+*/
+
+/* ..:: Removing arrows from numbers input ::.. */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 a {
@@ -242,6 +261,73 @@ footer > p {
   margin: 0;
 }
 
+
+/*
+* ..:: TOOLS ::..
+*/
+
+.tools--button {
+  background-color: var(--cardbg-color);
+  border: 1px solid var(--cardborder-color);
+  padding: 10px;
+  user-select: none;
+}
+
+.tools--button:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+
+.tools--weightInput {
+  margin: 0 5px;
+  padding: 10px;
+  width: 30px;
+}
+
+/* ..:: Pet CBD ::.. */
+
+.petCBD--div {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: fit-content;
+  padding: 5px 5px;
+  gap: 1vh;
+  max-width: 50vw;
+}
+
+.petCBD--label {
+  margin: 0;
+  padding: 0;
+}
+
+.petCBD--weightDiv {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  gap: 5px;
+}
+
+.petCBD--results {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: var(--cardbg-color);
+  border: 1px solid var(--cardborder-color);
+  padding: 10px;
+  text-align: left;
+}
+
+.petCBD--singleResult {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  gap: 10px;
+}
+
+.petCBD--disclaimer {
+}
 
 /* ..:: LOADING ::.. */
 
