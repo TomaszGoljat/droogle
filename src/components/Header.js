@@ -7,10 +7,10 @@ export default function Header() {
             <>
         <header>
             <div className='topbar--menu'>
-                <Link to="/vendors">Vendors</Link>
-                <Link to="/tools">Tools</Link>
-                <Link to="/support">Support</Link>
-                <Link to="/info">?</Link>
+                <Link to="/vendors" className='topbar--link'>Vendors</Link>
+                <Link to="/tools" className='topbar--link'>Tools</Link>
+                <Link to="/support" className='topbar--link'>Support</Link>
+                <Link to="/info" className='topbar--link'>?</Link>
             </div>
         </header>
         <Sponsors />

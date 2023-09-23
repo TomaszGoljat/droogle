@@ -57,10 +57,25 @@ header {
 }
 
 .topbar--menu {
+  padding-top: 5px;
   display: flex;
   column-gap: 1vw;
   margin-right: 1vw;
+  flex-wrap: wrap;
 }
+
+.topbar--link {
+  padding: 5px;
+  border: 1px solid orange;
+  letter-spacing: 1px;
+  border-radius: 10%;
+}
+
+.topbar--link:hover {
+  background-color: yellow;
+  color: blue;
+}
+
 .logo--text {
   margin: 0;
   font-size: 200%;
@@ -294,7 +309,7 @@ footer > p {
   width: fit-content;
   padding: 5px 5px;
   gap: 1vh;
-  max-width: 50vw;
+  max-width: 80vw;
 }
 
 .petCBD--label {
@@ -327,6 +342,8 @@ footer > p {
 }
 
 .petCBD--disclaimer {
+  margin: auto;
+  max-width: 50vw;
   font-size: 80%;
 }
 
