@@ -281,14 +281,21 @@ footer > p {
 * ..:: TOOLS ::..
 */
 
-.tools--button {
+.tools--nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.tools--button, .tools--unit {
   background-color: var(--cardbg-color);
   border: 1px solid var(--cardborder-color);
   padding: 10px;
   user-select: none;
 }
 
-.tools--button:hover {
+.tools--button:hover, .tools--unit:hover {
   background-color: blue;
   cursor: pointer;
 }
@@ -304,6 +311,7 @@ footer > p {
   background-color: var(--cardbg-color);
   border-radius: 3%;
   border: 1px solid orange;
+  text-align: center;
 }
 
 /*
@@ -313,6 +321,7 @@ footer > p {
 .cbd--div {
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 
 /* ..:: Pet CBD ::.. */
@@ -385,6 +394,33 @@ footer > p {
 .VOSCBD--result > p {
   padding: 0;
   margin: 0;
+}
+
+/* ..:: VolumeOilAdvancedCBD ::.. */
+
+.VOACBD--div {
+  margin: auto;
+  max-width: 80vw;
+}
+
+.VOACBD--inputField {
+  width: 30px;
+}
+
+.VOACBD--inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.VOACBD--input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.VOACBD--result {
+  text-align: center;
 }
 
 /* ..:: LOADING ::.. */

@@ -9,6 +9,7 @@ import Vendors from './pages/Vendors';
 import Support from './pages/Support';
 import Info from './pages/Info';
 import Cbd from './pages/Tools/Cbd';
+import Dxm from './pages/Tools/Dxm';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/tools' element={<ToolsLayout />}>
           <Route index element={<Tools />} />
           <Route path='/tools/cbd' element={<Cbd />} />
+          <Route path='/tools/dxm' element={<Dxm />} />
         </Route>
         <Route path='/support' element={<Support />} />
         <Route path='/info/' element={<Info />} />

@@ -33,7 +33,7 @@ export default function PetCBD() {
 
     return (
         <div className="petCBD--div">
-            <h2 className="petCBD--label">CBD dosage calculator for pets:</h2>
+            <h2 className="tools--label">CBD dosage calculator for pets:</h2>
             <div className="petCBD--weightDiv">
                 <label htmlFor="weight">Weight:</label>
                 <div className="tools--weightDiv">
