@@ -322,6 +322,7 @@ footer > p {
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
+  gap: 5vh;
 }
 
 /* ..:: Pet CBD ::.. */
@@ -334,6 +335,8 @@ footer > p {
   width: fit-content;
   padding: 5px 5px;
   gap: 1vh;
+  background-color: var(--bg-color);
+  padding: 20px;
   max-width: 80vw;
 }
 
@@ -375,8 +378,13 @@ footer > p {
 
 /* ..:: VolumeOilSimpleCBD ::.. */
 .VOSCBD--div {
+  display: flex;
+  flex-direction: column;
   margin: auto;
   max-width: 80vw;
+  gap: 10px;
+  background-color: var(--bg-color);
+  padding: 20px;
 }
 
 .VOSCBD--columns {
@@ -384,15 +392,22 @@ footer > p {
   justify-content: space-around;
 }
 
-.VOSCBD--result {
+.VOSCBD--result, .VOACBD--result {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin-top: 5px;
+  background-color: var(--cardbg-color);
+  border: 1px solid var(--cardborder-color);
+  padding: 5px;
+  width: 75%;
+  margin: auto;
 }
 
-.VOSCBD--result > p {
-  padding: 0;
+.VOSCBD--result > p, .VOACBD--result > p {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
   margin: 0;
 }
 
@@ -401,6 +416,9 @@ footer > p {
 .VOACBD--div {
   margin: auto;
   max-width: 80vw;
+  padding: 20px;
+  background-color: var(--bg-color);
+  gap: 10px;
 }
 
 .VOACBD--inputField {
@@ -420,7 +438,7 @@ footer > p {
 }
 
 .VOACBD--result {
-  text-align: center;
+  width: 100%;
 }
 
 /* ..:: LOADING ::.. */

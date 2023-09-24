@@ -46,8 +46,8 @@ export default function VolumeOilSimpleCBD() {
             </div>
             </div>
             <div className="VOSCBD--result">
-                <p>{result[0]}mg per ml</p>
-                <p>{result[1]}mg per drop</p>
+                <p>{result[0].toFixed(2)}mg <span>per ml</span></p>
+                <p>{result[1].toFixed(2)}mg <span>per drop</span></p>
             </div>
         <div className="VOSCBD--goToAdvDiv">
             <p>Product strength and volume not here?</p>

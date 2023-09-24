@@ -28,7 +28,9 @@ export default function VolumeOilAdvancedCBD() {
     }, [tempStrength, tempVolume, unit])
 
     useEffect(() => {
-        setResult([(strength/volume).toFixed(2),((strength/volume)/20).toFixed(2)])
+        if(strength > 0 && volume > 0) {
+            setResult([(strength/volume).toFixed(2),((strength/volume)/20).toFixed(2)])
+        } 
     }, [strength, volume])
 
 
@@ -73,8 +75,8 @@ export default function VolumeOilAdvancedCBD() {
                 <div className="VOACBD--input"></div>
             </div>
             <div className="VOACBD--result">
-            <p>{result[0]}mg per ml</p>
-            <p>{result[1]}mg per drop</p>
+            <p>{result[0]}mg <span>per ml</span></p>
+            <p>{result[1]}mg <span>per drop</span></p>
             </div>
         </div>
     )

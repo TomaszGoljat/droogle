@@ -66,7 +66,6 @@ export default function PetCBD() {
                 </div>
             </div>
             {console.log(tempWeight, weight, weightUnit, result)}
-            <div className="petCBD--disclaimer">You really should talk to a trusted vet before you give CBD to your pet. Do not relay only on this calculator on this random website on the Internet.</div>
         </div>
     )
 }
