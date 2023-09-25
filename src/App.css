@@ -286,6 +286,7 @@ footer > p {
   justify-content: space-around;
   width: 100%;
   flex-wrap: wrap;
+  font-size: 80%;
 }
 
 .tools--button, .tools--unit {
@@ -439,6 +440,43 @@ footer > p {
 
 .VOACBD--result {
   width: 100%;
+}
+
+
+/* ..:: DXM ::.. */
+
+.dxm--div {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  margin-bottom: 50px;
+}
+
+/* ..:: PlateauDXM ::.. */
+
+
+.pDXM--div {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: var(--bg-color);
+  padding: 20px;
+  gap: 10px;
+  min-width: 500px;
+}
+
+.pDXM--input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pDXM--results {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  column-gap: 10px;
+  background-color: var(--cardbg-color);
+  padding: 10px;
 }
 
 /* ..:: LOADING ::.. */

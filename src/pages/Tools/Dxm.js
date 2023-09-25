@@ -1,7 +1,10 @@
+import PlateauDXM from "../../components/calculators/PlateauDXM";
 
 
 export default function Dxm() {
     return (
-        <h1>DXM Calculators</h1>
+        <div className="dxm--div">
+            <PlateauDXM />
+        </div>
     )
 }
