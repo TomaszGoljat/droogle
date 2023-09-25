@@ -462,7 +462,6 @@ footer > p {
   background-color: var(--bg-color);
   padding: 20px;
   gap: 10px;
-  min-width: 500px;
 }
 
 .pDXM--input {
@@ -477,6 +476,7 @@ footer > p {
   column-gap: 10px;
   background-color: var(--cardbg-color);
   padding: 10px;
+  font-size: 70%;
 }
 
 /* ..:: LOADING ::.. */
