@@ -22,6 +22,17 @@
   font-size: 16px;
 }
 
+.tinyLink {
+  border: 1px solid orange;
+  padding: 2px;
+  border-radius: 10%;
+  letter-spacing: 1px;
+}
+
+.tinyLink:hover {
+  background-color: blue;
+}
+
 /*
 *
 */
@@ -479,6 +490,22 @@ footer > p {
   font-size: 70%;
 }
 
+.pDXM--source {
+  font-size: 80%;
+  text-align: right;
+  margin: 0;
+}
+
+.pDXM--disclaimer > p {
+ font-size: 70%;
+ text-align: right;
+ margin: 0;
+}
+
+.pDXM--footer {
+  display: flex;
+  flex-direction: column;
+}
 /* ..:: LOADING ::.. */
 
 .ring

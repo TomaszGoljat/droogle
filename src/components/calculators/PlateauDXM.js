@@ -75,6 +75,16 @@ export default function PlateauDXM() {
                 <div>{Math.round(result[3][1])}mg**</div>
                 <div>{Math.round(result[3][2])}mg</div>
             </div>
+            <div className="pDXM--footer">
+           <div className="pDXM--disclaimer">
+                <p>* combination of suggested dosage</p>
+                <p>** LD50 for DXM is still not confirmed</p>
+                </div>
+            </div>
+            <div className="pDXM--source">
+                source: <a href="https://www.erowid.org/chemicals/dxm/faq/dxm_experience.shtml#toc.5.1" className="tinyLink">erowid</a>
+            </div>
+ 
         </div>
     )
 }
