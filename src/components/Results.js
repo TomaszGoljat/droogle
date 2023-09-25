@@ -59,7 +59,7 @@ export default function Results(props) {
     // ..:: Label Component ::..
 
     const Label = (props) => {
-        return <span className="results--label">You are searching: {props.source}</span>
+        return <span className="tools--label">You are searching: {props.source}</span>
     }
     
     

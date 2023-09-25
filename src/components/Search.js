@@ -79,7 +79,7 @@ export default function Search() {
                 setError(err)
             })
     }
-        fetchResults();
+    query && source && fetchResults();
     }, [source, query])
 
     if(state === 'error')
