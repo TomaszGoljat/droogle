@@ -214,6 +214,47 @@ header {
 }
 
 
+/* ..:: VENDORS ::.. */
+
+.vendors--div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3vh;
+  gap: 10px;
+  margin: auto;
+}
+
+.singleVendor--div {
+  background-color: var(--cardbg-color);
+  border: 1px solid var(--cardborder-color);
+  padding: 5px;
+  width: 60vw;
+}
+
+.singleVendor--nameBox {
+  font-size: 120%;
+  color: orange;
+  letter-spacing: 1.5px;
+}
+
+.singleVendor--descBox {
+  font-size: 80%;
+}
+
+.singleVendor--tagBox {
+  display: flex;
+  gap: 5px;
+  font-size: 80%;
+  padding: 3px;
+}
+
+.singleVendor--tag {
+  padding: 2px;
+  border: 1px solid orange;
+  letter-spacing: 1px;
+}
+
+
 
 /* ..:: Shroomery ::.. */
 /* ..:: Erowid ::.. */
