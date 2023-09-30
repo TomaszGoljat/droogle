@@ -8,8 +8,12 @@ import Tools from './pages/Tools/Tools';
 import Vendors from './pages/Vendors';
 import Support from './pages/Support';
 import Info from './pages/Info';
-import Cbd from './pages/Tools/Cbd';
-import Dxm from './pages/Tools/Dxm';
+
+// Calculators:
+import PetCBD from './components/calculators/PetCBD';
+import PlateauDXM from './components/calculators/PlateauDXM';
+import VolumeOilAdvancedCBD from './components/calculators/VolumeOilAdvancedCBD';
+import VolumeOilSimpleCBD from './components/calculators/VolumeOilSimpleCBD';
 
 function App() {
   return (
@@ -20,8 +24,10 @@ function App() {
         <Route path='/vendors' element={<Vendors />} />
         <Route path='/tools' element={<ToolsLayout />}>
           <Route index element={<Tools />} />
-          <Route path='/tools/cbd' element={<Cbd />} />
-          <Route path='/tools/dxm' element={<Dxm />} />
+          <Route path='/tools/cbd-dose-for-pets' element={<PetCBD />} />
+          <Route path='/tools/volume-calc-advanced' element={<VolumeOilAdvancedCBD />} />
+          <Route path='/tools/volume-calc-simple' element={<VolumeOilSimpleCBD />} />
+          <Route path='/tools/dxm-plateau-calc' element={<PlateauDXM />} />
         </Route>
         <Route path='/support' element={<Support />} />
         <Route path='/info/' element={<Info />} />

@@ -359,12 +359,31 @@ footer > p {
   width: 30px;
 }
 
-.tools--label {
+.tools--label, .tool--linkDiv {
   padding: 10px;
   background-color: var(--cardbg-color);
   border-radius: 3%;
   border: 1px solid orange;
   text-align: center;
+}
+
+.tools--list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tool--linkDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.tool--linkName {
+  font-size: 120%;
+  letter-spacing: 1.5px;
+}
+
+.tool--linkDesc {
+  font-size: 70%;
 }
 
 /*
