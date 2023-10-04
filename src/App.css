@@ -254,6 +254,23 @@ header {
   letter-spacing: 1px;
 }
 
+.vendors--selectedCountry {
+  cursor: pointer;
+  padding: 0;
+  background-color: var(--bg-color);
+  border: 1px solid orange;
+}
+
+.vendors--countryList {
+  background-color: var(--cardbg-color);
+  list-style: none;
+  max-width: 300px;
+  max-height: 120px;
+  padding: 0;
+  overflow-y: scroll;
+  cursor: pointer;
+}
+
 
 
 /* ..:: Shroomery ::.. */

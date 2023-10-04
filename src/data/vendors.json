@@ -1,1 +1,52 @@
-[{"name":"Zamnesia","url":"https://zamnesia.com","description":"Zamnesia is the one-stop shop for enjoying the best Mother Nature has to offer","country":"Netherlands","sponsor":0,"coupon":"","tags":"shrooms, ayahuasca, accessories"},{"name":"Maya Ethnobotanicals","url":"https://maya-ethnobotanicals.com","description":"Plant Teachers Sharing Wisdom. Superfoods Providing Strength. Welcome To The Jungle, Welcome to Maya.","country":"Netherlands","sponsor":0,"coupon":"","tags":"ayahuasca, entheogens, superfoods"}]
+[
+    {
+      "name": "Ethnobotanicals",
+      "url": "http://www.ethnobotanicals.com",
+      "description": "World’s First Ethnobotanicals Superstore (est. 1998)",
+      "country": "USA",
+      "sponsor": 0,
+      "coupon": 0,
+      "tags": "ethnobotanical seeds, herbs",
+      "Email": "info@ethnobotanicals.com"
+    },
+    {
+      "name": "Kraatje",
+      "url": "https://www.kraatje.eu/",
+      "description": "The Power of Kratom. Biggest EU based Kratom Shop, also shipping to UK.",
+      "country": "Netherlands",
+      "sponsor": 0,
+      "coupon": 0,
+      "tags": "cannabinoids, kratom, superfoods",
+      "Email": "info@kraatje.eu"
+    },
+    {
+      "name": "Maya Ethnobotanicals",
+      "url": "https://maya-ethnobotanicals.com/",
+      "description": "Plant Teachers Sharing Wisdom. Superfoods Providing Strength. Welcome To The Jungle, Welcome to Maya.",
+      "country": "Netherlands",
+      "sponsor": 0,
+      "coupon": 0,
+      "tags": "ayahuasca, cannabinoids, incense, kratom, shaman, superfoods",
+      "Email": "info@maya-ethnobotanicals.com"
+    },
+    {
+      "name": "Zamnesia",
+      "url": "https://zamnesia.com",
+      "description": "Zamnesia is the one-stop shop for enjoying the best Mother Nature has to offer.",
+      "country": "Netherlands",
+      "sponsor": 0,
+      "coupon": 0,
+      "tags": "accessories, ayahuasca, cannabinoids, cannabis seeds, kratom, live plants, mycology, superfoods, truffles",
+      "Email": "info@zamnesia.com"
+    },
+    {
+      "name": "CBD Brothers DE",
+      "url": "https://www.cbd-brothers.de/",
+      "description": "Cannabinoids crystals, distillates, pastes, e-liquids etc. Including HHC and HHC-P.",
+      "country": "Germany",
+      "sponsor": 0,
+      "coupon": 0,
+      "tags": "cannabinoids",
+      "Email": "info@cbd-brothers.de"
+    }
+  ]
