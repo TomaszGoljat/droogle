@@ -219,16 +219,16 @@ header {
 .vendors--div {
   display: flex;
   flex-direction: column;
-  margin-bottom: 3vh;
+  margin-bottom: 5vh;
   gap: 10px;
-  margin: auto;
+  margin: 0 5vw;
+  max-width: 90vw;
 }
 
 .singleVendor--div {
   background-color: var(--cardbg-color);
   border: 1px solid var(--cardborder-color);
   padding: 5px;
-  width: 60vw;
 }
 
 .singleVendor--nameBox {
@@ -243,6 +243,7 @@ header {
 
 .singleVendor--tagBox {
   display: flex;
+  flex-wrap: wrap;
   gap: 5px;
   font-size: 80%;
   padding: 3px;
@@ -252,22 +253,54 @@ header {
   padding: 2px;
   border: 1px solid orange;
   letter-spacing: 1px;
+  font-size: 80%;
+}
+
+/* VENDORS FILTERS */
+
+.vendors--filters {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  gap: 10px;
+}
+
+.vendorsFilter--countrybox {
+  display: flex;
+  gap: 10px;
+}
+
+.vendorsFilter--tagbox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.vendorsFilter--button {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 80%;
+  border: 1px solid orange;
+  padding: 2px 5px;
+  vertical-align: middle;
+}
+
+.vendorsFilter--button:hover {
+  background-color: blue;
+  cursor: pointer;
 }
 
 .vendors--selectedCountry {
   cursor: pointer;
   padding: 0;
   background-color: var(--bg-color);
-  border: 1px solid orange;
 }
 
 .vendors--countryList {
-  background-color: var(--cardbg-color);
-  list-style: none;
-  max-width: 300px;
-  max-height: 120px;
-  padding: 0;
-  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   cursor: pointer;
 }
 
