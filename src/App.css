@@ -3,6 +3,7 @@
   --cardbg-color: rgba(223, 224, 227, 0.05);
   --cardborder-color: rgba(223, 224, 227, 1);
   --text-color: rgba(223, 224, 227, 1);
+  --transparent-blue: rgba(0, 0, 256, 0.25)
 }
 
 #root {
@@ -37,8 +38,10 @@
   position: fixed;
   bottom: 40px;
   right: 1vw;
-  height: 50px;
   width: 50px;
+  vertical-align: middle;
+  text-align: center;
+  aspect-ratio: 1 / 1;
   font-size: 250%;
   background-color: var(--cardbg-color);
   color: orange;
@@ -46,7 +49,7 @@
 }
 
 .backToTop:hover {
-  background-color: blue;
+  background-color: var(--transparent-blue);
   cursor: pointer;
 }
 /*

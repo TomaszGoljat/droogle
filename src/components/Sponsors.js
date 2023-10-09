@@ -8,7 +8,6 @@ export default function Sponsors() {
             <a href={props.url}>
                 <div className="sponsor--div">
                     <p className="sponsor--title">{props.title}</p>
-                    <p className="sponsor--desc">{props.description ? props.description : "Supporter"}</p>
                 </div>
             </a>
         )
