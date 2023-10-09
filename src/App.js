@@ -15,8 +15,12 @@ import PlateauDXM from './components/calculators/PlateauDXM';
 import VolumeOilAdvancedCBD from './components/calculators/VolumeOilAdvancedCBD';
 import VolumeOilSimpleCBD from './components/calculators/VolumeOilSimpleCBD';
 
+
 function App() {
+  
+  
   return (
+    <>
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -34,6 +38,7 @@ function App() {
       </Route>
     </Routes>
     </BrowserRouter>
+    </>
   );
 }
 

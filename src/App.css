@@ -33,6 +33,22 @@
   background-color: blue;
 }
 
+.backToTop {
+  position: fixed;
+  bottom: 40px;
+  right: 1vw;
+  height: 50px;
+  width: 50px;
+  font-size: 250%;
+  background-color: var(--cardbg-color);
+  color: orange;
+  border: 0;
+}
+
+.backToTop:hover {
+  background-color: blue;
+  cursor: pointer;
+}
 /*
 *
 */
@@ -365,11 +381,10 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: fixed;
-  bottom: 0.5vh;
+  position: sticky;
+  bottom: 1px;
   width: 100%;
   text-align: center;
-  background-color: var(--bg-color);
   padding: 5px 0;
   font-size: 80%;
 }

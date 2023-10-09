@@ -163,7 +163,10 @@ export default function Vendors() {
       setFilteredArr(vendorArr)
     }
     
-    function applyFilters() {
+    
+
+    useEffect(() => {
+        function applyFilters() {
         setIsFiltered(true)
         const countryFiltered = filterByCountry()
         //console.log('filteredArr: ', countryFiltered)
@@ -173,8 +176,6 @@ export default function Vendors() {
             setFilteredArr(countryFiltered)
         }
     }
-
-    useEffect(() => {
         applyFilters()
         setIsFiltered(true)
     }, [country, tagsArray])
