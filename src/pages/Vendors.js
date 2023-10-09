@@ -1,7 +1,7 @@
-import axios from "axios"
 import React from "react"
 import { useEffect } from "react"
-import { useSelect, useCombobox } from "downshift"
+import { useSelect } from "downshift"
+import "/node_modules/flag-icons/css/flag-icons.min.css"
 
 
 
@@ -13,6 +13,21 @@ export default function Vendors() {
     const [isFiltered, setIsFiltered] = React.useState(false)
 
 
+    const CountryFlag = (props) => {
+        let countryTag = ""
+        switch(props.name) {
+            case "Germany":
+                countryTag = "de"
+                break;
+            case "USA":
+                countryTag = "us"
+                break;
+            case "Netherlands":
+                countryTag = "nl"
+                break;
+        }
+        return <span className={`fi fi-${countryTag} fi`}></span>
+    }
 
     const SupporterTag = (props) => {
         let tag = ""
@@ -159,7 +174,6 @@ export default function Vendors() {
   function resetFilters() {
       setCountry(null)
       setTagsArray(createTagList(tags))
-      setIsFiltered(false)
       setFilteredArr(vendorArr)
     }
     
@@ -177,7 +191,6 @@ export default function Vendors() {
         }
     }
         applyFilters()
-        setIsFiltered(true)
     }, [country, tagsArray])
 
     // ..:: Single Vendor Card ::..
@@ -187,7 +200,9 @@ export default function Vendors() {
         return (
             <div className="singleVendor--div">
                 <div className="singleVendor--nameBox">
-                    <span className="singleVendor--name">{props.name}</span>
+                    <CountryFlag name={props.country} />
+                    <span className="singleVendor--name">{props.name}
+                    </span>
                     <span className="singleVendor--sponsor">
                         <SupporterTag level={props.sponsor} />
                     </span>
