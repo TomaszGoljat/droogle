@@ -7,6 +7,7 @@ import favDDG from "./icons/duckduckgo.png"
 import favErowid from "./icons/erowid.png"
 import favShroomery from "./icons/shroomery.png"
 
+import SubredditSelect from "./SubredditSelect";
 /*
 * Search Component display searchbox and search buttons.
 * Takes the input and when clicked on search button - sends it to chosen search component to fetch and display.
@@ -36,6 +37,12 @@ export default function Search() {
 
     function grabQuery(event) {
         setTempQuery(event.target.value)
+    }
+
+    const [selectedSubreddit, setSelectedSubreddit] = React.useState(null)
+    function subredditSearch({selectedItem}) {
+        setSource(selectedItem)
+        setSelectedSubreddit(selectedItem)
     }
 
     useEffect(() => {
@@ -98,6 +105,7 @@ export default function Search() {
             <button className="search--button" onClick={() => setSource('shroomery')}><img src={favShroomery} alt="Shroomery favicon" /> shroomery</button>
             <button className="search--button" onClick={() => setSource('bluelight')}><img src={favDDG} alt="DuckDuckGo favicon" /> bluelight</button>
         </div>
+        <div><SubredditSelect handleSelectedItemChange={subredditSearch} selectedItem={selectedSubreddit}/></div>
         {state === 'loading' ? <Loading /> : <Results results={results} source={source} />}
         </div>
     )

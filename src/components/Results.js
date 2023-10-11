@@ -1,5 +1,10 @@
 import React from "react";
 
+// Results Components:
+import Shroomery from "./results/Shroomery";
+import DuckDuckGo from "./results/DuckDuckGo";
+import Erowid from "./results/Erowid";
+
 export default function Results(props) {
     
     /*
@@ -11,46 +16,12 @@ export default function Results(props) {
     * ..:: Single Result components ::..
     */
    
-   // Shroomery:
-   // resultsTable[title, title-url, subforum, subforum-url, date]
-   const Shroomery = (props) => {
-        const shroomeryDate = -Math.round((Date.parse(props.date) - Date.now()) / (1000 * 60 * 60 * 24))
-       return (
-        <div className="shroomery--singleResult">
-           <a href={props.link} className="shroomery--link" target="_blank" rel="noreferrer">
-            <div className="shroomery--title">{props.title}</div></a>
-            <hr className="shroomery--hr"/>
-            <div className="shroomery--secondRow">posted {shroomeryDate} days ago in 
-            <a href={props.subforumUrl}>{props.subforum}</a></div>
-        </div>
-           )
-        }
+   
                    
-    // DuckDuckGo:
-    // Currently: DMT-nexus, Blue-light
+   
     
-    const DuckDuckGo = (props) => {
-        return (
-<a href={`https://${props.link}`} target="_blank" rel="noreferrer">
-            <div className="ddg--singleResult">
-                {props.title}
-                <p className="ddg--description">{props.description}</p>
-            </div></a>
-        )
-    }
     
-    // Erowid:
-    
-    const Erowid = (props) => {
-        return (
-            <a href={`https://www.erowid.org/${props.link}`} target="_blank" rel="noreferrer">
-            <div className="erowid--singleResult">
-                {props.title}
-                <hr className="erowid--hr" />
-                <p className="erowid--description">{props.description}</p>
-            </div></a>
-        )
-    }
+  
 
     /*
     * ..:: END OF Single Result components

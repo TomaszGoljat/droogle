@@ -2,6 +2,7 @@ import React from "react"
 import { useEffect } from "react"
 import { useSelect } from "downshift"
 import "/node_modules/flag-icons/css/flag-icons.min.css"
+import { nanoid } from "nanoid"
 
 
 
@@ -134,7 +135,7 @@ export default function Vendors() {
 
     function createTagList(tags) {
         return tags.map((t, i) => ({
-            id: i,
+            id: nanoid(),
             tagName: t,
             selected: false
         }))
@@ -245,7 +246,7 @@ export default function Vendors() {
                         country={v.country}
                         tags={v.tags.split(", ")}
                         coupon={v.coupon}
-                        key={`${v.name}${index}`}
+                        key={nanoid()}
                     />)
             })}
         </div>
