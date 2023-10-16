@@ -62,6 +62,14 @@ export default function Results(props) {
             // ..:: BlueLight, DMT-Nexus ::..
         case 'bluelight':
         case 'dmtnexus':
+        case 'r/Ayahuasca':
+        case 'r/microdosing':
+    case 'r/microgrowery':
+    case 'r/opiates':
+    case 'r/researchchemicals':
+    case 'r/shrooms':
+    case 'r/Stims':
+    case 'r/Trees':
             renderResults = props.results.map(result => <DuckDuckGo link={result[1]} title={result[0]} description={result[2]} />)
             break;
         

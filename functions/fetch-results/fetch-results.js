@@ -42,6 +42,20 @@ exports.handler = async function (event, context) {
       params = {
         q: keywords
       }
+      break;
+    // Subreddit Searches:
+    case 'r/Ayahuasca':
+    case 'r/microdosing':
+    case 'r/microgrowery':
+    case 'r/opiates':
+    case 'r/researchchemicals':
+    case 'r/shrooms':
+    case 'r/Stims':
+    case 'r/Trees':
+      url = ddgUrl
+      params = {
+        q: keywords + ` site:reddit.com/${source}/`
+      }
   }
   console.log(url)
   if (url) {
@@ -74,6 +88,14 @@ exports.handler = async function (event, context) {
       // resultsTable[title, title-url, description]
       case 'bluelight':
       case 'dmtnexus':
+      case 'r/Ayahuasca':
+      case 'r/microdosing':
+    case 'r/microgrowery':
+    case 'r/opiates':
+    case 'r/researchchemicals':
+    case 'r/shrooms':
+    case 'r/Stims':
+    case 'r/Trees':
         console.log(params)
         const ddgTitles = $(".result__a")
         const ddgLinks = $(".result__url")

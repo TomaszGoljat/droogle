@@ -14,6 +14,7 @@ import PetCBD from './components/calculators/PetCBD';
 import PlateauDXM from './components/calculators/PlateauDXM';
 import VolumeOilAdvancedCBD from './components/calculators/VolumeOilAdvancedCBD';
 import VolumeOilSimpleCBD from './components/calculators/VolumeOilSimpleCBD';
+import Privacy from './pages/Privacy';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         </Route>
         <Route path='/support' element={<Support />} />
         <Route path='/info/' element={<Info />} />
+        <Route path='/privacy-policy' element={<Privacy />} />
       </Route>
     </Routes>
     </BrowserRouter>

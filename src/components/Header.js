@@ -15,7 +15,7 @@ export default function Header() {
             </div>
         </header>
         <Sponsors />
-            <Link to="/" className='logo--text'>DROOGLE.INFO</Link>
+            <Link to="/" className='logo--text'>UNHARMED.INFO</Link>
             <p className='logo--description'>privacy focused harm reduction tools</p>
             </>
     )

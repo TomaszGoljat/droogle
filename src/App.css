@@ -158,6 +158,7 @@ header {
   align-items: center;
   justify-content: center;
   gap: 2px;
+  padding: 3px;
   min-width: 100px;
   font-weight: 700;
   color: var(--text-color);
@@ -165,6 +166,7 @@ header {
   border: 1px solid var(--text-color);
   margin: 1px 0;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .search--button:hover {
@@ -235,7 +237,7 @@ header {
 
 /* ..:: VENDORS ::.. */
 
-.vendors--div {
+.vendors--div, .privacy--div {
   display: flex;
   flex-direction: column;
   margin-bottom: 5vh;
@@ -635,6 +637,12 @@ footer > p {
 .pDXM--footer {
   display: flex;
   flex-direction: column;
+}
+/* ..:: PRIVACY ::.. */
+
+.redEmphasis {
+  color: red;
+  letter-spacing: 1px;
 }
 /* ..:: LOADING ::.. */
 

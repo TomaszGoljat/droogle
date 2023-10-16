@@ -1,7 +1,8 @@
 import { useSelect } from "downshift";
 import React from "react";
+import favDDG from "./icons/duckduckgo.png"
 
-const items = ["r/opiates", "r/Stims", "r/trees"]
+const items = ["r/Ayahuasca", "r/microdosing", "r/microgrowery", "r/opiates", "r/researchchemicals", "r/shrooms", "r/Stims", "r/Trees"]
 function SubredditSelect({ selectedItem, handleSelectedItemChange }) {
     const {
         isOpen,
@@ -15,20 +16,22 @@ function SubredditSelect({ selectedItem, handleSelectedItemChange }) {
             selectedItem: selectedItem,
             onSelectedItemChange: handleSelectedItemChange,
         })
+
+        const RedditLabel = () =>  {return <><img src={favDDG} alt="DuckDuckGo favicon" /> reddit</>}
         
         return (
             <div className="vendorsFilter--countrybox">
                 <label {...getLabelProps()}></label>
-                <div className="vendors--selectedCountry" {...getToggleButtonProps()}>
-                    {selectedItem ?? 'subreddit'}
+                <div className="search--button" {...getToggleButtonProps()}>
+                    {selectedItem ?? <RedditLabel />}
                 </div>
                 <div {...getMenuProps()} className="vendors--countryList">
                     {isOpen &&
                         items.map((item, index) => (
                             <div
-                                className="vendorsFilter--button"
+                                className="search--button"
                                 style={
-                                    highlightedIndex === index ? { backgroundColor: 'blue' } : {}
+                                    highlightedIndex === index ? { backgroundColor: 'blue', padding: '3px' } : {padding: '3px'}
                                 }
                                 key={`${item}${index}`}
                                 {...getItemProps({ item, index })}
