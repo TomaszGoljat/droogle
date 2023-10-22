@@ -3,20 +3,28 @@
 export default function Support() {
     return (
     <div className="support-div">
-        <h1>Support us!</h1>
-        <p>Here you will find ways to support Droogle and different tiers of supporters with perks. For example:</p>
-        <ul>
-        <li>5$/month - bronze supporter tag for vendors list / discord</li>
-<li>10$/month - silver supporter tag</li>
-<li>20$/month - gold supporter tag + being listed on blue marquee</li>
-<li>50$/month - platinum supporter tag + being listed in golden color on blue marquee</li>
+        <h2>If you like what we are doing here, please consider supporting us on <a href="https://ko-fi.com/unharmed" className="support--kofi">ko-fi.com/unharmed</a></h2>
+        <p>We offer little perks for our supporters to show our gratitude:</p>
+        <ul className="support--perkList">
+            <li className="support--perkItem">Supporter tag on vendor list for monthly supporters (at 5$ / month).</li>
+            <li className="support--perkItem">Your name (and link) on the blue marquee element above (at 20$ / month).</li>
+            <li className="support--perkItem">All of our donors will be listed at the bottom of this page.</li>
+            <li className="support--perkItem">Supporter tag on our Discord and Subreddit (at 5$ / month).</li>
+            <li className="support--perkItem">Monthly supporters will get an opportunity to vote on new features.</li>
+            <li className="support--perkItem"></li>
+            <li className="support--perkItem"></li>
+            <li className="support--perkItem"></li>
+            <li className="support--perkItem"></li>
+            
         </ul>
-        <h2>Current supporters:</h2>
-        <ul>
-            <li>Elon Musk</li>
-            <li>Pan Tadeusz</li>
-            <li>Bisz</li>
-        </ul>
+       <p>Monthly cost of running this website:</p>
+       <div className="support--maintenance">
+        <div className="support--firstRow"></div><div className="support--firstRow">per month</div>
+        <div className="support--costTitle">Hosting</div><div className="support--costValue">19$</div>
+        <div className="support--costTitle">Search Functions</div><div className="support--costValue">25$</div>
+        <div className="support--costTitle">Domain</div><div className="support--costValue">2$</div>
+        <div className="support--costTotal">Total</div><div className="support--valueTotal">46$</div>
+       </div>
     </div>
     )
 }
