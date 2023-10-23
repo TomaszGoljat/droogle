@@ -2,8 +2,8 @@
 
 export default function Support() {
     return (
-    <div className="support-div">
-       <h2>If you can, please consider supporting us on <a href="https://ko-fi.com/unharmed" className="support--kofi">ko-fi.com/unharmed</a></h2>
+    <div className="support--div">
+       <h2>If you can, please consider supporting us on <br/><a href="https://ko-fi.com/unharmed" className="support--kofi">ko-fi.com/unharmed</a></h2>
        <p>Monthly cost of running this website:</p>
        <div className="support--maintenance">
         <div className="support--firstRow"></div><div className="support--firstRow">per month</div>
