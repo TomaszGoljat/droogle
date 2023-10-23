@@ -476,6 +476,9 @@ footer > p {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: fit-content;
+  max-width: 80vw;
+  margin: 0 auto;
 }
 .tool--linkDiv {
   display: flex;
