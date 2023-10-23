@@ -1,6 +1,7 @@
 import React from 'react';
 import Sponsors from './Sponsors';
 import { Link } from 'react-router-dom';
+import Logo from './logo.png';
 
 export default function Header() {
     return (
