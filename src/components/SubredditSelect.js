@@ -2,7 +2,7 @@ import { useSelect } from "downshift";
 import React from "react";
 import favDDG from "./icons/duckduckgo.png"
 
-const items = ["r/Ayahuasca", "r/microdosing", "r/microgrowery", "r/opiates", "r/researchchemicals", "r/shrooms", "r/Stims", "r/Trees"]
+const items = ["r/Ayahuasca", "r/microdosing", "r/microgrowery", "r/opiates", "r/researchchemicals", "r/shrooms", "r/Stim", "r/Trees"]
 function SubredditSelect({ selectedItem, handleSelectedItemChange }) {
     const {
         isOpen,

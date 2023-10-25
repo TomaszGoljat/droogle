@@ -1,52 +1,182 @@
 [
-    {
-      "name": "Ethnobotanicals",
-      "url": "http://www.ethnobotanicals.com",
-      "description": "World’s First Ethnobotanicals Superstore (est. 1998)",
-      "country": "USA",
-      "sponsor": 0,
-      "coupon": 0,
-      "tags": "ethnobotanical seeds, herbs",
-      "Email": "info@ethnobotanicals.com"
-    },
-    {
-      "name": "Kraatje",
-      "url": "https://www.kraatje.eu/",
-      "description": "The Power of Kratom. Biggest EU based Kratom Shop, also shipping to UK.",
-      "country": "Netherlands",
-      "sponsor": 0,
-      "coupon": 0,
-      "tags": "cannabinoids, kratom, superfoods",
-      "Email": "info@kraatje.eu"
-    },
-    {
-      "name": "Maya Ethnobotanicals",
-      "url": "https://maya-ethnobotanicals.com/",
-      "description": "Plant Teachers Sharing Wisdom. Superfoods Providing Strength. Welcome To The Jungle, Welcome to Maya.",
-      "country": "Netherlands",
-      "sponsor": 0,
-      "coupon": 0,
-      "tags": "ayahuasca, cannabinoids, incense, kratom, shaman, superfoods",
-      "Email": "info@maya-ethnobotanicals.com"
-    },
-    {
-      "name": "Zamnesia",
-      "url": "https://zamnesia.com",
-      "description": "Zamnesia is the one-stop shop for enjoying the best Mother Nature has to offer.",
-      "country": "Netherlands",
-      "sponsor": 0,
-      "coupon": 0,
-      "tags": "accessories, ayahuasca, cannabinoids, cannabis seeds, kratom, live plants, mycology, superfoods, truffles",
-      "Email": "info@zamnesia.com"
-    },
-    {
-      "name": "CBD Brothers DE",
-      "url": "https://www.cbd-brothers.de/",
-      "description": "Cannabinoids crystals, distillates, pastes, e-liquids etc. Including HHC and HHC-P.",
-      "country": "Germany",
-      "sponsor": 0,
-      "coupon": 0,
-      "tags": "cannabinoids",
-      "Email": "info@cbd-brothers.de"
-    }
-  ]
+  {
+    "name": "Amanita LT",
+    "url": "https://amanita.lt/",
+    "description": "Lithuanian shop offering Amanita Muscaria (Fly Agaric) products: dried mushroom, tinctures and creams.",
+    "country": "Lithuania",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "Amanita Muscaria",
+    "Email": "info@amanita.lt"
+  },
+  {
+    "name": "Avalon Magic Plants",
+    "url": "https://www.avalonmagicplants.com/",
+    "description": "Wide range of ethnobotanicals, grow-kits, spores and accessories.",
+    "country": "Netherlands",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "accessories, ayahuasca, cannabinoids, herbs, kratom, superfoods, truffles",
+    "Email": "info@avalonmagicplants.com"
+  },
+  {
+    "name": "Bounty Botanicals",
+    "url": "https://bountybotanicals.com/",
+    "description": "Assortment of rare and unique live plant specimens and seeds.",
+    "country": "USA",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "ethnobotanical seeds, herbs, live plants",
+    "Email": "bountybotanicals@gmail.com"
+  },
+  {
+    "name": "CBD Brothers DE",
+    "url": "https://www.cbd-brothers.de/",
+    "description": "Cannabinoids crystals, distillates, pastes, e-liquids etc. Including HHC and HHC-P.",
+    "country": "Germany",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "cannabinoids",
+    "Email": "info@cbd-brothers.de"
+  },
+  {
+    "name": "Dutch Natural Healing",
+    "url": "https://dutchnaturalhealing.com/",
+    "description": "Wide range of high quality CBD products, including water soluble extracts, patches and cosmetics.",
+    "country": "Netherlands",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "cannabinoids",
+    "Email": "info@dutchnaturalhealing.com"
+  },
+  {
+    "name": "Ethnobotanicals",
+    "url": "http://www.ethnobotanicals.com",
+    "description": "World’s First Ethnobotanicals Superstore (est. 1998)",
+    "country": "USA",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "ethnobotanical seeds, herbs",
+    "Email": "info@ethnobotanicals.com"
+  },
+  {
+    "name": "I Am Shaman",
+    "url": "https://www.iamshaman.com/",
+    "description": "Exotic botanical superstore.",
+    "country": "USA",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "ayahuasca, herbs, kratom, shaman, superfoods",
+    "Email": "shopkeeper@iamshaman.com"
+  },
+  {
+    "name": "ICE Head Shop",
+    "url": "https://www.iceheadshop.co.uk/",
+    "description": "One of the biggest UK based Headshops. Over 10 years in business with a wide range of products.",
+    "country": "United Kingdom",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "accessories, cannabinoids, cannabis seeds, herbs",
+    "Email": "admin@iceheadshop.co.uk"
+  },
+  {
+    "name": "Kraatje",
+    "url": "https://www.kraatje.eu/",
+    "description": "The Power of Kratom. Biggest EU based Kratom Shop, also shipping to UK.",
+    "country": "Netherlands",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "cannabinoids, kratom, superfoods",
+    "Email": "info@kraatje.eu"
+  },
+  {
+    "name": "Magic Garden Seeds",
+    "url": "https://www.magicgardenseeds.com/",
+    "description": "Unique heirloom seeds from Germany and Europe - old varieties, rarities and heritage cultivars. Worldwide shipping.",
+    "country": "Germany",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "ethnobotanical seeds, shaman",
+    "Email": "service@magicgardenseeds.com"
+  },
+  {
+    "name": "Maya Ethnobotanicals",
+    "url": "https://maya-ethnobotanicals.com/",
+    "description": "Plant Teachers Sharing Wisdom. Superfoods Providing Strength. Welcome To The Jungle, Welcome to Maya.",
+    "country": "Netherlands",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "ayahuasca, cannabinoids, incense, kratom, shaman, superfoods",
+    "Email": "info@maya-ethnobotanicals.com"
+  },
+  {
+    "name": "My Growing Company",
+    "url": "https://mgc.to/",
+    "description": "Very interesting brand dedicated to the distribution of CBD cannabis - “an example of creativity and innovation”.",
+    "country": "Switzerland",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "cannabinoids",
+    "Email": "info@mgc.team"
+  },
+  {
+    "name": "Phytoextractum",
+    "url": "https://www.phytoextractum.com/",
+    "description": "Ethnobotanical plants and extracts, including AKA approved Kratom products.",
+    "country": "USA",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "ayahuasca, herbs, kratom, superfoods",
+    "Email": "support@phytoextractum.com"
+  },
+  {
+    "name": "Salvia Express",
+    "url": "https://www.salvia-express.nl/en/",
+    "description": "For all your Salvia Divinorum adventures",
+    "country": "Netherlands",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "Salvia Divinorum",
+    "Email": "support@salvia-express.nl"
+  },
+  {
+    "name": "Shamans Garden",
+    "url": "https://www.shamansgarden.com/",
+    "description": "Shamanic herbs and supplies for meditation and ritual.",
+    "country": "USA",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "accessories, ethnobotanical seeds, ethnobotanicals, kratom, live plants, shaman",
+    "Email": "shopkeeper@shamansgarden.com"
+  },
+  {
+    "name": "uweed",
+    "url": "https://uweed.ch/en/",
+    "description": "Wide selection of Swiss CBD brands, including fresh herb, concentrates and oils.",
+    "country": "Switzerland",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "cannabinoids",
+    "Email": "hello@uweed.ch"
+  },
+  {
+    "name": "Waking Herbs",
+    "url": "https://www.wakingherbs.com/",
+    "description": "Ethnobotanicals from around the world directly from the source.",
+    "country": "Netherlands",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "ayahuasca, ethnobotanicals, herbs, shaman, superfoods",
+    "Email": "admin@wakingherbs.com"
+  },
+  {
+    "name": "Zamnesia",
+    "url": "https://zamnesia.com",
+    "description": "Zamnesia is the one-stop shop for enjoying the best Mother Nature has to offer.",
+    "country": "Netherlands",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "accessories, ayahuasca, cannabinoids, cannabis seeds, kratom, live plants, mycology, superfoods, truffles",
+    "Email": "info@zamnesia.com"
+  }
+]

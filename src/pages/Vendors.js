@@ -26,6 +26,15 @@ export default function Vendors() {
             case "Netherlands":
                 countryTag = "nl"
                 break;
+            case "Lithuania":
+                countryTag = "lt"
+                break;
+            case "United Kingdom":
+                countryTag = "gb"
+                break;
+            case "Switzerland":
+                countryTag = "ch"
+                break;
         }
         return <span className={`fi fi-${countryTag} fi`}></span>
     }

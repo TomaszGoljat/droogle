@@ -50,7 +50,7 @@ exports.handler = async function (event, context) {
     case 'r/opiates':
     case 'r/researchchemicals':
     case 'r/shrooms':
-    case 'r/Stims':
+    case 'r/Stim':
     case 'r/Trees':
       url = ddgUrl
       params = {
@@ -94,7 +94,7 @@ exports.handler = async function (event, context) {
     case 'r/opiates':
     case 'r/researchchemicals':
     case 'r/shrooms':
-    case 'r/Stims':
+    case 'r/Stim':
     case 'r/Trees':
         console.log(params)
         const ddgTitles = $(".result__a")

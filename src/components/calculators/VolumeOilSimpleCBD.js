@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import { Link } from "react-router-dom"
 
 export default function VolumeOilSimpleCBD() {
 
@@ -49,9 +50,9 @@ export default function VolumeOilSimpleCBD() {
                 <p>{result[0].toFixed(2)}mg <span>per ml</span></p>
                 <p>{result[1].toFixed(2)}mg <span>per drop</span></p>
             </div>
-        <div className="VOSCBD--goToAdvDiv">
-            <p>Product strength and volume not here?</p>
-            <h2>Go to Advanced Calculator</h2>
+        <div className="tool--linkDiv">
+            <p style={{margin: "0 0 10px 0"}}>Product strength and volume not here?</p>
+            <Link to='/tools/volume-calc-advanced' className="tool--link" style={{color: "orange"}}>Check Advanced Volume Calculator</Link>
         </div>
         </div>
     )

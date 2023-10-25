@@ -1,9 +1,9 @@
 function Privacy() {
     return (
-        <div className="privacy--div">
-            <h1>Privacy Policy</h1>
+        <div className="pageDiv">
+            <h1 className="pageTitle">Privacy Policy</h1>
             <h2>Our privacy policy is very simple:</h2>
-            <ul>
+            <ul className="pageList">
                 <li>We <span className="redEmphasis">do not</span> track your activity on our website.</li>
                 <li>We <span className="redEmphasis">do not</span> store any identifiable informations about our users.</li>
                 <li>We <span className="redEmphasis">do not</span> use cookies.</li>

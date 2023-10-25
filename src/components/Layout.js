@@ -8,7 +8,7 @@ export default function Layout() {
 
     const [showBackToTop, setShowBackToTop] = React.useState(false)
 
-    const BackToTop = () => <button className="backToTop" onClick={goToTop}>&#8679;</button>
+    const BackToTop = () => <button className="backToTop" onClick={goToTop}>UP</button>
 
     function goToTop() {
         window.scrollTo({

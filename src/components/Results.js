@@ -4,6 +4,7 @@ import React from "react";
 import Shroomery from "./results/Shroomery";
 import DuckDuckGo from "./results/DuckDuckGo";
 import Erowid from "./results/Erowid";
+import NoResults from "./results/NoResults";
 
 export default function Results(props) {
     
@@ -12,29 +13,16 @@ export default function Results(props) {
     * renderResults - mapping through results and rendering them accordingly to source
     */
     let renderResults
-    /*
-    * ..:: Single Result components ::..
-    */
-   
-   
-                   
-   
-    
-    
-  
-
-    /*
-    * ..:: END OF Single Result components
-    */
-
     // ..:: Label Component ::..
 
     const Label = (props) => {
         return <span className="tools--label">You are searching: {props.source}</span>
     }
-    
-    
+
     // ..:: Rendering Results ::..
+    if(props.results.length < 1 && props.source) {
+        renderResults = <NoResults source={props.source} />
+    } else {
     switch (props.source) {
         // ..:: No Source ::..
         default:
@@ -42,7 +30,8 @@ export default function Results(props) {
             break;
         // ..:: Shroomery ::..
         case 'shroomery':
-            renderResults = props.results.map(result => <Shroomery 
+            renderResults = 
+            props.results.map(result => <Shroomery 
             link={result[1]} 
             title={result[0]} 
             subforum={result[2]} 
@@ -68,17 +57,18 @@ export default function Results(props) {
     case 'r/opiates':
     case 'r/researchchemicals':
     case 'r/shrooms':
-    case 'r/Stims':
+    case 'r/Stim':
     case 'r/Trees':
             renderResults = props.results.map(result => <DuckDuckGo link={result[1]} title={result[0]} description={result[2]} />)
             break;
         
-    }
+    } 
+}
 
     return (
         <div className="results--div">
            {props.source ? <Label source={props.source} /> : ""}
-            {renderResults}
+           {renderResults}
         </div>
     )
 }
