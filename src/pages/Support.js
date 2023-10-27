@@ -27,7 +27,7 @@ export default function Support() {
         <p className="pageSubtitle">To read more about project itself: <br /><br />
         <Link className="topbar--link" to="/info">Check Out About Page</Link></p>
         <div className="support--wall">
-        <h2>Wall of supporters</h2>
+        <h2>Wall of Supporters</h2>
             You can be the first one here!<br />
             Or the second one! <br />
             Or third? <br />

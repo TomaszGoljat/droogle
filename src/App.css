@@ -42,7 +42,7 @@
   vertical-align: middle;
   text-align: center;
   aspect-ratio: 1 / 1;
-  font-size: 120%;
+  font-size: 150%;
   background-color: var(--cardbg-color);
   color: orange;
   border: 0;
@@ -187,6 +187,12 @@ header {
   min-height: 30px;
   flex-wrap: wrap;
   margin: 0, 5px;
+}
+
+.search--error {
+  background: var(--cardbg-color);
+  padding: 5px;
+  border: 1px solid orange;
 }
 
 /* ..:: DONORS BOX ::.. */

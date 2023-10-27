@@ -8,6 +8,7 @@ import favErowid from "./icons/erowid.png"
 import favShroomery from "./icons/shroomery.png"
 
 import SubredditSelect from "./SubredditSelect";
+import { Link } from "react-router-dom";
 /*
 * Search Component display searchbox and search buttons.
 * Takes the input and when clicked on search button - sends it to chosen search component to fetch and display.
@@ -28,10 +29,10 @@ export default function Search() {
     const url = "/.netlify/functions/fetch-results/fetch-results.js"
 
     const [results, setResults] = React.useState([]);
-    const [error, setError] = React.useState(false);
     const [state, setState] = React.useState('');
+    const [error, setError] = React.useState(false);
     const [source, setSource] = React.useState('')
-
+    
     const [tempQuery, setTempQuery] = React.useState("")
     const [query, setQuery] = React.useState("")
 
@@ -91,7 +92,15 @@ export default function Search() {
 
     if(state === 'error')
         return (
-    <h1>{error.toString()}</h1>
+    <div className="search--error">
+        <p>We are a little bit too busy, please wait few seconds and try again.</p>
+        <p>You might need to try another source.</p>
+        <Link to="/" className="tool--link" style={{color: "orange"}}> ..:: Click Here To Go Back ::.. </Link>
+        <p>As soon as I can afford proper proxy services, you shouldn't see this message again.</p>
+        <p>If you can - consider <Link to="/support" className="tool--link" style={{color: "orange"}}>supporting</Link> unharmed.</p>
+        <p>And as always, stay unharmed!</p>
+        <h6>{error.toString()}</h6>
+    </div>
     );
 
         return (
