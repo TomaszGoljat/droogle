@@ -18,15 +18,23 @@ export default function Info() {
                 </ul>
             <p>There's plenty of projects, blogs and forums about psychoactive substances, entheogens and psychedelic culture. Unfortunately with Google and Bing algorithm changes it is getting harder and harder for those places to reach wider audience. With the arrival of AI models and <i>"AI answers"</i> a huge part of the Internet will become deserted.</p>
             <p>Information about psychoactive substances, psychedelics and spirituality shouldn't be served by language models. It's too dangerous and sooner or later those topics will disappear from search engines altogether. We need to create our own tools, knowledge repositories and discussion forums.</p>
-            <p className="redEmphasis">Without the fear of not being indexed by Google.</p>
+            <p>Without worrying about showing on Google.</p>
             <p>I guess, that's the main motivation behind unharmed. Drug addicts, substance abusers, but also self-taught psychonauts and truth-seekers are struggling to find relevant information through traditional search engines. Information that can potentially save their lives or keep them <i>unharmed</i>, but is being removed from search results to keep advertisers and governement agencies satisfied.</p>
-            <h1 className="pageTitle">Contact</h1>
-            <center>
-            <p>e-mail: <a href="unharmed-info@proton.me">unharmed-info@proton.me</a> and <a href="admin@unharmed.info">admin@unharmed.info</a><br/>
-            Subreddit: <a href="https://www.reddit.com/r/unharmed/">r/unharmed</a> User: <a href="https://www.reddit.com/user/stayunharmed">u/stayunharmed</a> <br/>
-            Discord: <a href="https://discord.gg/suJq9xBD">invite</a> Ko-fi: <a href="https://ko-fi.com/unharmed">ko-fi.com/unharmed</a>
-            </p>
-            </center>
+            <div className="contactBox">
+            <div className="contactBox--header">..:: Contact ::..</div>
+            <div className="contactBox--label">secured email:</div>
+            <div className="contactBox--value"><a href="unharmed-info@proton.me">unharmed-info@proton.me</a></div>
+            <div className="contactBox--label">email:</div>
+            <div className="contactBox--value"><a href="admin@unharmed.info">admin@unharmed.info</a></div>
+            <div className="contactBox--label">subreddit:</div>
+            <div className="contactBox--value"><a href="https://www.reddit.com/r/unharmed/" target="_blank" rel="noreferrer">r/unharmed</a></div>
+            <div className="contactBox--label">reddit user:</div>
+            <div className="contactBox--value"><a href="https://www.reddit.com/user/stayunharmed" target="_blank" rel="noreferrer">u/stayunharmed</a></div>
+            <div className="contactBox--label">discord channel:</div>
+            <div className="contactBox--value"><a href="https://discord.gg/suJq9xBD" target="_blank" rel="noreferrer">invite</a></div>
+            <div className="contactBox--label">ko-fi page:</div>
+            <div className="contactBox--value"><a href="https://ko-fi.com/unharmed" target="_blank" rel="noreferrer">ko-fi.com/unharmed</a></div>
+            </div>
             <p className="pageSubtitle">Stay unharmed!</p>
         </div>
     )

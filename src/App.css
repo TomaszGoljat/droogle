@@ -495,6 +495,41 @@ footer > p {
   margin: 0;
   text-align: center;
 }
+
+.contactBox {
+  margin: auto;
+  display: grid;
+  grid-template-areas: 
+  "header header";
+  width: fit-content;
+  column-gap: 10px;
+  row-gap: 3px;
+  background-color: var(--bg-color);
+  padding: 10px;
+  border: 1px solid yellow;
+  padding-top: 2px;
+}
+
+.contactBox--header {
+  grid-area: header;
+  text-align: center;
+  font-size: 200%;
+  color: orange;
+  border-bottom: 2px solid yellow;
+}
+
+.contactBox--label {
+  border-bottom: 1px solid yellow;
+}
+
+.contactBox--value {
+  text-align: right;
+  border-bottom: 1px solid yellow;
+}
+
+.contactBox--value:hover {
+  background-color: blue;
+}
 /*
 * ..:: TOOLS ::..
 */
