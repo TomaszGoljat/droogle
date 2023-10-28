@@ -269,6 +269,10 @@ header {
   padding: 5px;
 }
 
+.singleVendor--link:hover {
+  background-color: blue;
+}
+
 .singleVendor--nameBox {
   display: flex;
   gap: 5px;

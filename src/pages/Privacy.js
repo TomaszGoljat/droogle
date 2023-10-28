@@ -1,3 +1,5 @@
+import ContactBox from "../components/ContactBox";
+
 function Privacy() {
     return (
         <div className="pageDiv">
@@ -18,6 +20,7 @@ function Privacy() {
             <p>We use privacy focused DuckDuckGo search engine to perform searches on websites on which we cannot use internal search functionality.</p>
             <p>We do not store any informations you put in our tools and calculators.</p>
             <p>We do not share any data with vendors listed on our website.</p>
+            <ContactBox />
         </div>
     )
 }

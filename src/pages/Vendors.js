@@ -208,6 +208,7 @@ export default function Vendors() {
 
     const SingleVendor = (props) => {
         return (
+            <a href={props.url} target="_blank" rel="noreferrer" className="singleVendor--link">
             <div className="singleVendor--div">
                 <div className="singleVendor--nameBox">
                     <CountryFlag name={props.country} />
@@ -225,6 +226,7 @@ export default function Vendors() {
                     {props.coupon === 0 ? "" : <span>{props.coupon}</span>}
                 </div>
             </div>
+            </a>
         )
     }
 
@@ -250,6 +252,7 @@ export default function Vendors() {
                 return (
                     <SingleVendor
                         name={v.name}
+                        url={v.url}
                         sponsor={v.sponsor}
                         desc={v.description}
                         country={v.country}
