@@ -177,10 +177,10 @@ export default function Vendors() {
   
    /*
    * ..:: TAGS FILTER END ::.. 
+   
+   // ..:: Reset filters ::..
    */
-
-  // ..:: Reset filters ::..
-  
+   
   function resetFilters() {
       setCountry(null)
       setTagsArray(createTagList(tags))
@@ -208,12 +208,13 @@ export default function Vendors() {
 
     const SingleVendor = (props) => {
         return (
-            <a href={props.url} target="_blank" rel="noreferrer" className="singleVendor--link">
+            
             <div className="singleVendor--div">
                 <div className="singleVendor--nameBox">
+                    <a href={props.url} target="_blank" rel="noreferrer" className="singleVendor--link">
                     <CountryFlag name={props.country} />
                     <span className="singleVendor--name">{props.name}
-                    </span>
+                    </span></a>
                     <span className="singleVendor--sponsor">
                         <SupporterTag level={props.sponsor} />
                     </span>
@@ -226,7 +227,7 @@ export default function Vendors() {
                     {props.coupon === 0 ? "" : <span>{props.coupon}</span>}
                 </div>
             </div>
-            </a>
+            
         )
     }
 
@@ -245,7 +246,7 @@ export default function Vendors() {
                 > {t.tagName} </button>)}
                 </div>
             <div className="vendors-filtersBtnDiv">
-                <button className="vendorsFilter--button" onClick={resetFilters}>Reset</button>
+                <button className="vendorsFilter--button" onClick={resetFilters} style={{fontSize: "120%"}}>Reset</button>
             </div>
             </div>
             {filteredArr.map((v, index) => {
