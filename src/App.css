@@ -269,7 +269,7 @@ header {
   padding: 5px;
 }
 
-.singleVendor--link:hover {
+.singleVendor--div:hover {
   background-color: blue;
 }
 
