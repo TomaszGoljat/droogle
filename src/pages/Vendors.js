@@ -47,16 +47,16 @@ export default function Vendors() {
                 tag = ""
                 break;
             case 1:
-                tag = <div className="supporter-bronze">bronze supporter</div>
+                tag = <div className="supporter--bronze">supporter</div>
                 break;
             case 2:
-                tag = <div className="supporter-silver">silver supporter</div>
+                tag = <div className="supporter--silver">silver supporter</div>
                 break;
             case 3:
-                tag = <div className="supporter-gold">gold supporter</div>
+                tag = <div className="supporter--gold">gold supporter</div>
                 break;
             case 4:
-                tag = <div className="supporter-platinum">platinum supporter</div>
+                tag = <div className="supporter--platinum">platinum supporter</div>
                 break;
         }
         return tag
@@ -224,7 +224,7 @@ export default function Vendors() {
                     {props.tags.map((tag, index) => <div className="singleVendor--tag" key={`${tag}${index}`}>{tag}</div>)}
                 </div>
                 <div className="singleVendor--couponBox">
-                    {props.coupon === 0 ? "" : <span>{props.coupon}</span>}
+                    {props.coupon === 0 ? "" : <span className="singleVendor--coupon">Discount code: {props.coupon}</span>}
                 </div>
             </div>
             

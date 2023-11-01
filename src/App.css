@@ -300,6 +300,21 @@ header {
   font-size: 80%;
 }
 
+.singleVendor--coupon {
+  font-size: 80%;
+  padding: 3px 3px;
+  letter-spacing: 2px;
+  color: orange;
+}
+
+/* VENDORS SUPPORTERS */
+.supporter--bronze {
+  font-size: 60%;
+  color: white;
+  background-color: var(--bg-color);
+  padding: 2px;
+}
+
 /* VENDORS FILTERS */
 
 .vendors--filters {

@@ -1,13 +1,13 @@
 [
   {
-    "name": "Amanita LT",
-    "url": "https://amanita.lt/",
-    "description": "Lithuanian shop offering Amanita Muscaria (Fly Agaric) products: dried mushroom, tinctures and creams.",
-    "country": "Lithuania",
-    "sponsor": 0,
-    "coupon": 0,
-    "tags": "Amanita Muscaria",
-    "Email": "info@amanita.lt"
+    "name": "Dutch Natural Healing",
+    "url": "https://dutchnaturalhealing.com/",
+    "description": "Wide range of high quality CBD products, including water soluble extracts, patches and cosmetics.",
+    "country": "Netherlands",
+    "sponsor": 1,
+    "coupon": "“Unharmed15” for 15% off",
+    "tags": "cannabinoids",
+    "Email": "info@dutchnaturalhealing.com"
   },
   {
     "name": "Avalon Magic Plants",
@@ -18,6 +18,16 @@
     "coupon": 0,
     "tags": "accessories, ayahuasca, cannabinoids, herbs, kratom, superfoods, truffles",
     "Email": "info@avalonmagicplants.com"
+  },
+  {
+    "name": "Awakening Roots",
+    "url": "https://awakeningroots.org/",
+    "description": "Amanita products “Handcrafted, Wildcrafted and forged into LOVE”. Dried caps, extracts and soaps.",
+    "country": "USA",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "Amanita Muscaria",
+    "Email": "https://awakeningroots.org/contact/"
   },
   {
     "name": "Bounty Botanicals",
@@ -38,16 +48,6 @@
     "coupon": 0,
     "tags": "cannabinoids",
     "Email": "info@cbd-brothers.de"
-  },
-  {
-    "name": "Dutch Natural Healing",
-    "url": "https://dutchnaturalhealing.com/",
-    "description": "Wide range of high quality CBD products, including water soluble extracts, patches and cosmetics.",
-    "country": "Netherlands",
-    "sponsor": 0,
-    "coupon": 0,
-    "tags": "cannabinoids",
-    "Email": "info@dutchnaturalhealing.com"
   },
   {
     "name": "Ethnobotanicals",
