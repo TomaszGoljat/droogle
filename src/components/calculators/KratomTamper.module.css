@@ -47,7 +47,6 @@
 
 .lastRow {
     text-align: center;
-    border: 1px solid var(--cardborder-color);
     font-size: 80%;
 }
 
@@ -60,7 +59,7 @@
 
 .results {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     max-width: 80vw;
     width: fit-content;
     min-width: 30vw;
