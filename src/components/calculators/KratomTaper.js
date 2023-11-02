@@ -1,92 +1,168 @@
-import React from "react";
+import React, { useEffect } from "react";
+import styles from "./KratomTamper.module.css"
 
 function KratomTaper() {
 
     const [dosage, setDosage] = React.useState(0)
     const [tempDosage, setTempDosage] = React.useState(0)
     const [pattern, setPattern] = React.useState("easier")
+    const [schedule, setSchedule] = React.useState([])
 
     console.log("Current pattern: ", pattern);
 
-    function createScheduleArr(dosage, pattern) {
-        const scheduleArr = []
-        let firstWeek = Math.ceil(dosage / 3 * 2);
-        scheduleArr.push(firstWeek);
-        switch (pattern) {
-            case "easier":
+    useEffect(() => {
+        setSchedule(createSchedule(dosage, pattern))
+        console.log(schedule)
+    }, [pattern, dosage])
 
-                break;
-            case "regular":
+    useEffect(() => {
+        const timeoutId = setTimeout(() => setDosage(tempDosage * 10), 100)
+        return () => clearTimeout(timeoutId)
+    }, [tempDosage])
 
-                break;
-            case "harder":
-
-                break;
-            default:
-                break;
-        }
-        console.log("Current array: ", scheduleArr)
-        return scheduleArr
+    function grabDosage(event) {
+        setTempDosage(event.target.value)
     }
 
-    function howManyWeeks(dosage, pattern) {
+    function createSchedule(dosage, pattern) {
         let weeks = 0;
         const scheduleArr = []
+        let lastWeek;
+        let currentWeek;
         switch (pattern) {
             case "easier":
                 for (let i = dosage; i >= 25; i = i * 0.95) {
-                    weeks += 1;
-                    scheduleArr.push(Math.ceil(i) / 10)
+                    if (scheduleArr.length > 0) {
+                        lastWeek = scheduleArr[scheduleArr.length - 1]
+                    } else {
+                        lastWeek = i;
+                    }
+                    currentWeek = Math.ceil(i)
+                    console.log(lastWeek, currentWeek)
+                    if((lastWeek - currentWeek) < 10) {
+                        console.log("lower than 1g")
+                        i = (lastWeek - 10)
+                        scheduleArr.push(i)
+                    } else {
+                        console.log("higher than 1g")
+                        scheduleArr.push(currentWeek)
+                    }
+                    weeks += 1
                 }
+
                 break;
             case "regular":
                 for (let i = Math.ceil(dosage / 4 * 3); i >= 25; i = i * 0.95) {
                     if (scheduleArr.length > 0) {
-                    if (-(scheduleArr[scheduleArr.length -1] - i) >= 10) {
-                        console.log("higher than 1g")
-                        scheduleArr.push(Math.ceil(i) / 10)
+                        lastWeek = scheduleArr[scheduleArr.length - 1]
                     } else {
-                        scheduleArr.push(scheduleArr[scheduleArr.length -1] - 1)
-                        i = (scheduleArr[scheduleArr.length -1] - 1) * 10; 
+                        lastWeek = i;
                     }
+                    currentWeek = Math.ceil(i)
+                    console.log(lastWeek, currentWeek)
+                    if((lastWeek - currentWeek) < 10) {
+                        console.log("lower than 1g")
+                        i = (lastWeek - 10)
+                        scheduleArr.push(i)
                     } else {
-                        scheduleArr.push(Math.ceil(i) / 10)
+                        console.log("higher than 1g")
+                        scheduleArr.push(currentWeek)
                     }
 
                     weeks += 1;
                 }
                 break;
             case "harder":
-                for (let i = Math.ceil(dosage / 3 * 2); i >= 25; i = i * 0.9) {
-                    weeks += 1;
-                    scheduleArr.push(Math.floor(i) / 10)
+                for (let i = Math.ceil(dosage / 3 * 2); i >= 25; i = i * 0.95) {
+                    if (scheduleArr.length > 0) {
+                        lastWeek = scheduleArr[scheduleArr.length - 1]
+                    } else {
+                        lastWeek = i;
+                    }
+                    currentWeek = Math.ceil(i)
+                    console.log(lastWeek, currentWeek)
+                    if((lastWeek - currentWeek) < 10) {
+                        console.log("lower than 1g")
+                        i = (lastWeek - 10)
+                        scheduleArr.push(i)
+                    } else {
+                        console.log("higher than 1g")
+                        scheduleArr.push(currentWeek)
+                    }
                 }
+                    weeks += 1
                 break;
         }
-
-        console.log(weeks)
-        console.log(scheduleArr)
+        return scheduleArr
     }
 
-    howManyWeeks(500, pattern)
+    const WeekLine = (props) => {
+        return (
+            <>
+                <div className={styles.row}>Week {props.week} </div>
+                <div className={styles.row}>{props.dosage / 10}g</div>
+                <div className={`${styles.row} ${styles.lastColumn}`}>consumed</div>
+            </>
+        )
+    }
 
-    createScheduleArr(50, pattern)
+   const Results = () => {
     return (
-        <div className="KT--div">
-            <div className="KT--inputBox">
-                Current dosage in grams
-                <input className="KT--input"></input>
-                <p>Tool is designed to work for daily dosages between 5 and 75 grams.
-                    For higher dosages, please consult r/quittingkratom . </p>
+    <>
+    <h3 className={styles.chosenPattern}>Chosen pattern: <span style={{color: "orange"}}>{pattern}</span></h3>
+<div className={styles.results}>
+                <div className={styles.header}></div>
+                <div className={styles.header}>dosage</div>
+                <div className={styles.lastHeader}>consumed</div>
+                {schedule.length > 0 ? schedule.map((line, i) => <WeekLine week={i+1} dosage={line} />) : "Choose Pattern"}
             </div>
-            <div className="KT--patterns">
-                <button className="KT--easy" onClick={() => setPattern("easier")}>Easier</button>
-                <button className="KT--regular" onClick={() => setPattern("regular")}>Regular</button>
-                <button className="KT--harder" onClick={() => setPattern("harder")}>Harder</button>
-            </div>
-            <div className="KT--results">
+            <Disclaimer />
+            </>
+    )
+   } 
 
+   const NoData = () => {
+    return <p className={styles.noData}>Please provide your daily dosage</p>
+   }
+
+
+   const Disclaimer = () => {
+    return (
+    <div className={styles.disclaimer}>
+        <p>For more information about this calculator read <a href="https://ko-fi.com/unharmed" className={styles.link} target="_blank" rel="noreferrer">this post</a>.</p>
+        <p>For more information about quitting kratom visit <a href="https://www.reddit.com/r/quittingkratom/" className={styles.link} target="_blank" rel="noreferrer">r/quittingkratom</a>.</p>
+        <p>Good luck, you can do it!</p>
+        <p>Stay unharmed.</p>
+    </div>
+   )}
+
+    return (
+        <div className={styles.main}>
+            <h2 className="tools--label">
+                Kratom Taper
+            </h2>
+            <br />
+            <div className={styles.inputBox}>
+                Your current daily dosage
+                <input 
+                id="dosage"
+                name="dosage"
+                className={styles.dosageInput}
+                onChange={grabDosage}
+                value={tempDosage}
+                min={0}
+                max={75} /> g
             </div>
+            <h3 className={styles.patternsLabel}>
+                Choose preffered taper pattern:
+            </h3>
+            <div className={styles.patterns}>
+                <button className={styles.easyBTN} onClick={() => setPattern("easier")}>Easier</button>
+                <button className={styles.regularBTN} onClick={() => setPattern("regular")}>Regular</button>
+                <button className={styles.hardBTN} onClick={() => setPattern("harder")}>Harder</button>
+            </div>
+            {schedule.length > 0 ? <Results /> : <NoData />}      
+            
         </div>
     )
 }
