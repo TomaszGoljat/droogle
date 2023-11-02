@@ -100,7 +100,7 @@ function KratomTaper() {
         return (
             <>
                 <div className={styles.row}>Week {props.week} </div>
-                <div className={styles.row} style={{textAlign: "center"}}>{props.dosage / 10}g</div>
+                <div className={styles.row} style={{textAlign: "right"}}>{props.dosage / 10} g</div>
             </>
         )
     }
@@ -111,7 +111,7 @@ function KratomTaper() {
     <h3 className={styles.chosenPattern}>Pattern: <span style={{color: "orange"}}>{pattern}</span></h3>
 <div className={styles.results}>
                 <div className={styles.header}></div>
-                <div className={styles.header} style={{textAlign: "center"}}>dosage</div>
+                <div className={styles.header} style={{textAlign: "right"}}>dosage</div>
                 {schedule.length > 0 ? schedule.map((line, i) => <WeekLine week={i+1} dosage={line} />) : "Choose Pattern"}
                 <div className={styles.lastRow} style={{textAlign: "right"}}>Well</div>
                 <div className={styles.lastRow} style={{textAlign: "left"}}>Done</div>
@@ -140,7 +140,7 @@ function KratomTaper() {
     return (
         <div className={styles.main}>
             <h2 className="tools--label">
-                Kratom Taper
+                kratom taper
             </h2>
             <br />
             <div className={styles.inputBox}>
