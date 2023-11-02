@@ -45,6 +45,12 @@
     text-align: right;
 }
 
+.lastRow {
+    text-align: center;
+    border: 1px solid var(--cardborder-color);
+    font-size: 80%;
+}
+
 .noData {
     text-align: center;
     font-size: 120%;
@@ -63,7 +69,7 @@
     border-bottom: none;
 }
 
-.header, .lastHeader {
+.header, .lastHeader, .lastRow {
     background-color: white;
     color: black;
     padding: 2.5px 5px;

@@ -109,13 +109,15 @@ function KratomTaper() {
    const Results = () => {
     return (
     <>
-    <h3 className={styles.chosenPattern}>Chosen pattern: <span style={{color: "orange"}}>{pattern}</span></h3>
+    <h3 className={styles.chosenPattern}>Pattern: <span style={{color: "orange"}}>{pattern}</span></h3>
 <div className={styles.results}>
                 <div className={styles.header}></div>
                 <div className={styles.header}>dosage</div>
                 <div className={styles.lastHeader}>consumed</div>
                 {schedule.length > 0 ? schedule.map((line, i) => <WeekLine week={i+1} dosage={line} />) : "Choose Pattern"}
             </div>
+            <div className={styles.lastRow}>Well done</div>
+            <br /> <br />
             <Disclaimer />
             </>
     )
