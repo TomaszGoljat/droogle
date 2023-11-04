@@ -31,7 +31,7 @@ function KratomTaper() {
         let currentWeek;
         switch (pattern) {
             case "easier":
-                for (let i = dosage; i >= 25; i = i * 0.95) {
+                for (let i = dosage; i >= 15; i = i * 0.95) {
                     if (scheduleArr.length > 0) {
                         lastWeek = scheduleArr[scheduleArr.length - 1]
                     } else {
@@ -52,7 +52,7 @@ function KratomTaper() {
 
                 break;
             case "regular":
-                for (let i = Math.ceil(dosage / 4 * 3); i >= 25; i = i * 0.95) {
+                for (let i = Math.ceil(dosage / 4 * 3); i >= 15; i = i * 0.95) {
                     if (scheduleArr.length > 0) {
                         lastWeek = scheduleArr[scheduleArr.length - 1]
                     } else {
@@ -73,7 +73,7 @@ function KratomTaper() {
                 }
                 break;
             case "harder":
-                for (let i = Math.ceil(dosage / 3 * 2); i >= 25; i = i * 0.95) {
+                for (let i = Math.ceil(dosage / 3 * 2); i >= 15; i = i * 0.9) {
                     if (scheduleArr.length > 0) {
                         lastWeek = scheduleArr[scheduleArr.length - 1]
                     } else {
@@ -131,7 +131,6 @@ function KratomTaper() {
     return (
     <div className={styles.disclaimer}>
         <p>For more information about this calculator read <a href="https://ko-fi.com/unharmed" className={styles.link} target="_blank" rel="noreferrer">this post</a>.</p>
-        <p>For more information about quitting kratom visit <a href="https://www.reddit.com/r/quittingkratom/" className={styles.link} target="_blank" rel="noreferrer">r/quittingkratom</a>.</p>
         <p>Good luck, you can do it!</p>
         <p>Stay unharmed.</p>
     </div>

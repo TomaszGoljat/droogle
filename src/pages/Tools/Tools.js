@@ -27,9 +27,15 @@ export default function Tools() {
         },
         {
         name: "advanced oil strength calculator",
-        description: "Input strength and volume of your oil to calculate mg per ml and per drop",
+        description: "Input strength and volume of your oil to calculate mg per ml and per drop.",
         tags: ["cannabinoids", "oil", "calculator", "dosage"],
         path: "volume-calc-advanced"
+        },
+        {
+            name: "kratom taper schedule generator",
+            description: "Provide your current daily dose to generate taper schedule and quit Kratom.",
+            tags: ["kratom", "addiction", "quitting"],
+            path: "kratom-taper"
         },
         {
         name: "DXM plateau calculator",
