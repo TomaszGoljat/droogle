@@ -145,13 +145,14 @@ function KratomTaper() {
             <div className={styles.inputBox}>
                 Your current daily dosage
                 <input 
+                type="number"
                 id="dosage"
                 name="dosage"
                 className={styles.dosageInput}
                 onChange={grabDosage}
                 value={tempDosage}
                 min={0}
-                max={75} /> g
+                max={100} /> g
             </div>
             <h3 className={styles.patternsLabel}>
                 Choose preffered taper pattern:
