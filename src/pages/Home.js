@@ -16,7 +16,7 @@ export default function Home() {
                 <h2 className={styles.title}>
                     <Link to="/search">🔍 Search</Link>
                 </h2>
-                <p>A privacy-focused search tool.</p>
+                <p>Anonymous search tool.</p>
                 <p>
                     Conduct anonymous searches only on relevant forums and websites.
                 </p>
