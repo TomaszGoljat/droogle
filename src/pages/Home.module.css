@@ -1,0 +1,45 @@
+:root {
+    --bg-color: rgba(19, 23, 44, 1);
+    --cardbg-color: rgba(223, 224, 227, 0.05);
+    --cardborder-color: rgba(223, 224, 227, .1);
+    --text-color: rgba(223, 224, 227, 1);
+    --transparent-blue: rgba(0, 0, 256, 0.25)
+  }
+
+@media (min-width: 400px) {
+    .main {grid-template-columns: repeat(1, 1fr);}
+}
+
+@media (min-width: 600px) {
+    .main { grid-template-columns: repeat(2, 1fr);}
+}
+
+@media (min-width: 900px) {
+    .main { grid-template-columns: repeat(3, 1fr);}
+}
+
+
+  .main {
+    display: grid;
+    gap: 10px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    min-width: 30vw;
+    min-height: fit-content;
+    border: 1px solid var(--cardborder-color);
+    background-color: var(--bg-color);
+}
+.section > p {
+    font-size: 90%;
+    letter-spacing: 1px;
+    padding-left: 5px;
+}
+
+.title {
+    background-color: var(--transparent-blue);
+    font-size: 110%;
+    text-align: center;
+}

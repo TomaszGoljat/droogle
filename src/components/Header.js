@@ -7,7 +7,7 @@ export default function Header() {
             <>
         <header>
             <div className='topbar--menu'>
-                <Link to="/" className='topbar--link'>🔍 Search</Link>
+                <Link to="/search" className='topbar--link'>🔍 Search</Link>
                 <Link to="/tools" className='topbar--link'>🛠️ Tools</Link>
                 <Link to="/vendors" className='topbar--link'>🛒 Vendors</Link>
                 <Link to="/support" className='topbar--link'>💛 Support</Link>

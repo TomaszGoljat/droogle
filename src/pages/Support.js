@@ -28,7 +28,7 @@ export default function Support() {
         <Link className="topbar--link" to="/info">Check Out About Page</Link></p>
         <div className="support--wall">
         <h2>Wall of Supporters</h2>
-            <a href="https://dutchnaturalhealing.com/" className="bronze">Dutch Natural Healing</a><br />
+            You can be the first one here!<br />
             You can still be the second one here! <br />
             Or maybe the third? <br />
             <a href="https://ko-fi.com/unharmed" style={{color: "blue", textAlign: "center"}}>Check out ko-fi.com/unharmed</a><br />

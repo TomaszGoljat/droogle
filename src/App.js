@@ -15,6 +15,7 @@ import VolumeOilAdvancedCBD from './components/calculators/VolumeOilAdvancedCBD'
 import VolumeOilSimpleCBD from './components/calculators/VolumeOilSimpleCBD';
 import Privacy from './pages/Privacy';
 import KratomTaper from './components/calculators/KratomTaper';
+import Home from './pages/Home';
 
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Search />} />
+        <Route index element={<Home />} />
+        <Route path='/search' element={<Search />} />
         <Route path='/vendors' element={<Vendors />} />
         <Route path='/tools' element={<ToolsLayout />}>
           <Route index element={<Tools />} />
