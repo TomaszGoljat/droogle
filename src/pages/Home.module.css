@@ -20,7 +20,7 @@
 
 
   .main {
-   margin-top: 30px; 
+   margin: 3vh 5vw;
     display: grid;
     gap: 15px;
 }
@@ -31,16 +31,17 @@
     min-width: 30vw;
     min-height: fit-content;
     border: 1px solid var(--cardborder-color);
-    background-color: var(--bg-color);
+    background-color: var(--cardbg-color);
 }
 .section > p {
     font-size: 90%;
     letter-spacing: 1px;
     padding-left: 5px;
+    text-align: center;
 }
 
 .title {
-    background-color: var(--transparent-blue);
+    background-color: var(--cardbg-color);
     font-size: 110%;
     text-align: center;
 }

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import styles from "./Tools.module.css"
 
 
 export default function Tools() {
@@ -58,7 +59,7 @@ export default function Tools() {
         )
     }
     return (
-        <div className="tools--list">
+        <div className={styles.main}>
             {toolsArray.map(tool => <ToolLink toolObj={tool} />)}
         </div>
     )

@@ -16,10 +16,10 @@ export default function Sponsors() {
 
     return (
         <div className="sponsors">
-            <div className="sponsors--supporters">Info: </div>
-            <Marquee pauseOnHover={true} autoFill={true} speed={30} gradient={true} gradientColor={[0, 0, 139]} gradientWidth="5vw" className="sponsors--marquee">
+            <div className="sponsors--supporters"></div>
+            <Marquee pauseOnHover={true} autoFill={true} speed={10} gradient={true} gradientColor={[0, 0, 139]} gradientWidth="5vw" className="sponsors--marquee">
                 <Sponsor title="new tool: Kratom Taper" url="https://ko-fi.com/post/New-tool-on-website-Kratom-Taper-R5R6QR169" desc="4th of November"/>
-                <Sponsor title="ko-fi page" url="https://ko-fi.com/unharmed" desc="accepting donations on:"/>
+                <Sponsor title="ko-fi page" url="https://ko-fi.com/unharmed" desc="become supporter on:"/>
             </Marquee>
         </div>
     )
