@@ -1,14 +1,13 @@
-import React, { useEffect } from "react";
-import styles from "./KratomTaper.module.css"
+import React, {useEffect} from "react";
+import styles from "./AdvancedKratomTaper.module.css";
 
-function KratomTaper() {
-
+function AdvancedKratomTaper() {
     const [dosage, setDosage] = React.useState(0)
     const [tempDosage, setTempDosage] = React.useState(0)
     const [pattern, setPattern] = React.useState("easier")
     const [schedule, setSchedule] = React.useState([])
+    const [cycle, setCycle] = React.useState(7)
 
-    console.log("Current pattern: ", pattern);
 
     useEffect(() => {
         setSchedule(createSchedule(dosage, pattern))
@@ -24,7 +23,7 @@ function KratomTaper() {
         setTempDosage(event.target.value)
     }
 
-    function createSchedule(dosage, pattern) {
+    function createSchedule(dosage, pattern, cycle) {
         let weeks = 0;
         const scheduleArr = []
         let lastWeek;
@@ -42,6 +41,7 @@ function KratomTaper() {
                     if((lastWeek - currentWeek) < 10) {
                         console.log("lower than 1g")
                         i = (lastWeek - 10)
+
                         scheduleArr.push(i)
                     } else {
                         console.log("higher than 1g")
@@ -96,76 +96,75 @@ function KratomTaper() {
         return scheduleArr
     }
 
-    const WeekLine = (props) => {
-        return (
-            <>
-                <div className={styles.row}>Week {props.week} </div>
-                <div className={styles.row} style={{textAlign: "right"}}>{props.dosage / 10} g</div>
-            </>
-        )
+    // How many days left:
+    function daysLeft(scheduleArr, index) {
+        return scheduleArr.length - index;
     }
 
-   const Results = () => {
-    return (
-    <>
-    <h3 className={styles.chosenPattern}>Pattern: <span style={{color: "orange"}}>{pattern}</span></h3>
-<div className={styles.results}>
-                <div className={styles.header}></div>
-                <div className={styles.header} style={{textAlign: "right"}}>dosage</div>
-                {schedule.length > 0 ? schedule.map((line, i) => <WeekLine week={i+1} dosage={line} />) : "Choose Pattern"}
-                <div className={styles.lastRow} style={{textAlign: "right"}}>Well</div>
-                <div className={styles.lastRow} style={{textAlign: "left"}}>Done</div>
-            </div>
-            <br />
-            <Disclaimer />
-            </>
-    )
-   } 
+    // current day: array index + 1;
 
-   const NoData = () => {
-    return <p className={styles.noData}>Please provide your daily dosage</p>
-   }
+    // Kratom consumed so far
+    // Returns integer
+    function kratomSoFar(scheduleArr, index) {
+        var sum = 0;
+        for(var i = 0; i <= index; i++) {
+            sum += scheduleArr[i]
+        }
+        return sum
+    }
 
+    // Kratom left to be consumed
+    // Return integer
+    function kratomLeft(scheduleArr, index) {
+        var sum = 0;
+        for(var i = index; i <= scheduleArr.length; i++) {
+            sum += scheduleArr[i]
+        }
+        return sum
+    }
 
-   const Disclaimer = () => {
-    return (
-    <div className={styles.disclaimer}>
-        <p>For more information about this calculator read <a href="https://ko-fi.com/unharmed" className={styles.link} target="_blank" rel="noreferrer">this post</a>.</p>
-        <p>Good luck, you can do it!</p>
-        <p>Stay unharmed.</p>
-    </div>
-   )}
+    // Total required Kratom
+    function kratomTotal(scheduleArr) {
+        return scheduleArr.reduce((t,c) => t+c, 0)
+    }
 
-    return (
-        <div className={styles.main}>
-            <h2 className="tools--label">
-                kratom taper
-            </h2>
-            <br />
-            <div className={styles.inputBox}>
-                Your current daily dosage
-                <input 
-                type="number"
-                id="dosage"
-                name="dosage"
-                className={styles.dosageInput}
-                onChange={grabDosage}
-                value={tempDosage}
-                min={0}
-                max={100} /> g
-            </div>
-            <h3 className={styles.patternsLabel}>
-                Choose preffered taper pattern:
-            </h3>
-            <div className={styles.patterns}>
-                <button className={styles.easyBTN} onClick={() => setPattern("easier")}>Easier</button>
-                <button className={styles.regularBTN} onClick={() => setPattern("regular")}>Regular</button>
-                <button className={styles.hardBTN} onClick={() => setPattern("harder")}>Harder</button>
-            </div>
-            {schedule.length > 0 ? <Results /> : <NoData />}      
-            
-        </div>
-    )
+    // Splitting the dose through the day
+    // Returns array
+    function splitDose(dose, amount) {
+        // create dosage array and fill it with zeros
+        const dosageArr = Array(amount).fill(0)
+        console.log('first', dosageArr)
+        var singleDosage
+        if(dose % amount == 0) {
+            singleDosage = dose / amount
+            dosageArr.fill(singleDosage)
+        } else {
+            var reminder = dose % amount;
+            console.log('reminder', reminder)
+            singleDosage = (dose - reminder) / amount
+            dosageArr.fill(singleDosage)
+            if(reminder == singleDosage) {
+                if(reminder % 2 == 0) {
+                    dosageArr[0] = singleDosage + (reminder / 2)
+                    dosageArr[dosageArr.length -1] = singleDosage + (reminder / 2)
+                }
+            } else
+            dosageArr[dosageArr.length - 1] = singleDosage + reminder
+        }
+        return dosageArr
+    }
+
+    // Filling whole cycle (3, 5, 7)
+
+    function createCycle(dose, cycle) {
+        const cycleArray = []
+        for(var i = 1; i <= cycle; i++) {
+            cycleArray.push(dose)
+        }
+        return cycleArray;
+    }
+
+    console.log(splitDose(9, 3))
 }
 
-export default KratomTaper;
+export default AdvancedKratomTaper;

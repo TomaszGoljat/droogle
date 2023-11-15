@@ -15,6 +15,7 @@ import VolumeOilAdvancedCBD from './components/calculators/VolumeOilAdvancedCBD'
 import VolumeOilSimpleCBD from './components/calculators/VolumeOilSimpleCBD';
 import Privacy from './pages/Privacy';
 import KratomTaper from './components/calculators/KratomTaper';
+import AdvancedKratomTaper from './components/calculators/AdvancedKratomTaper';
 import Home from './pages/Home';
 
 
@@ -36,6 +37,8 @@ function App() {
           <Route path='/tools/volume-calc-simple' element={<VolumeOilSimpleCBD />} />
           <Route path='/tools/dxm-plateau-calc' element={<PlateauDXM />} />
           <Route path='/tools/kratom-taper' element={<KratomTaper />} />
+          <Route path='/tools/advanced-kratom-taper' element={<AdvancedKratomTaper />} />
+          
         </Route>
         <Route path='/support' element={<Support />} />
         <Route path='/info/' element={<Info />} />

@@ -275,10 +275,15 @@ header {
 
 .singleVendor--nameBox {
   display: flex;
-  gap: 5px;
+  gap: 15px;
   font-size: 120%;
   color: orange;
   letter-spacing: 1.5px;
+}
+
+.singleVendor--link {
+  display: flex;
+  gap: 10px;
 }
 
 .singleVendor--descBox {

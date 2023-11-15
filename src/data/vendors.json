@@ -1,13 +1,23 @@
 [
   {
-    "name": "Dutch Natural Healing",
-    "url": "https://dutchnaturalhealing.com/",
-    "description": "Wide range of high quality CBD products, including water soluble extracts, patches and cosmetics.",
-    "country": "Netherlands",
-    "sponsor": 1,
-    "coupon": "“Unharmed15” for 15% off",
-    "tags": "cannabinoids",
-    "Email": "info@dutchnaturalhealing.com"
+    "name": "Amanita Store",
+    "url": "https://amanitamuscariastore.online/",
+    "description": "Amanita Muscaria from Ukrainian parts of Carpathian mountains.",
+    "country": "Ukraine",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "Amanita Muscaria, superfoods",
+    "Email": "forestshopcarpatian@gmail.com"
+  },
+  {
+    "name": "Amanita World US",
+    "url": "https://amanitaworld.us/",
+    "description": "Tinctures, capsules and dried caps of Amanita Muscaria.",
+    "country": "USA",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "Amanita Muscaria",
+    "Email": "sales@amanitaworld.us"
   },
   {
     "name": "Avalon Magic Plants",
@@ -40,6 +50,16 @@
     "Email": "bountybotanicals@gmail.com"
   },
   {
+    "name": "Calm Mushroom",
+    "url": "https://calmmushroom.shop/",
+    "description": "Family running a small business of making organic products from wild mushrooms.",
+    "country": "Latvia",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "Amanita Muscaria",
+    "Email": "mushroomcalm@gmail.com"
+  },
+  {
     "name": "CBD Brothers DE",
     "url": "https://www.cbd-brothers.de/",
     "description": "Cannabinoids crystals, distillates, pastes, e-liquids etc. Including HHC and HHC-P.",
@@ -50,6 +70,26 @@
     "Email": "info@cbd-brothers.de"
   },
   {
+    "name": "Crisp Kratom",
+    "url": "https://crispkratom.com/",
+    "description": "Kratom shop focused on delivering products manufactured with the highest standards. Every batch is lab tested.",
+    "country": "USA",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "kratom",
+    "Email": "https://crispkratom.com/contact/"
+  },
+  {
+    "name": "Dutch Natural Healing",
+    "url": "https://dutchnaturalhealing.com/",
+    "description": "Wide range of high quality CBD products, including water soluble extracts, patches and cosmetics.",
+    "country": "Netherlands",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "cannabinoids",
+    "Email": "info@dutchnaturalhealing.com"
+  },
+  {
     "name": "Ethnobotanicals",
     "url": "http://www.ethnobotanicals.com",
     "description": "World’s First Ethnobotanicals Superstore (est. 1998)",
@@ -58,6 +98,36 @@
     "coupon": 0,
     "tags": "ethnobotanical seeds, herbs",
     "Email": "info@ethnobotanicals.com"
+  },
+  {
+    "name": "EU Kratom (Kratomexperten)",
+    "url": "https://www.eukratom.com/",
+    "description": "Wide range of powdered Kratom, many strains to choose from.",
+    "country": "Sweden",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "kratom",
+    "Email": "contact@eukratom.com"
+  },
+  {
+    "name": "Forest Amanita",
+    "url": "https://forestamanita.com/",
+    "description": "Unleash the potential and embrace the extraordinary relationship with Amanita Muscaria. Dried caps, capsules, extracts and infused honey.",
+    "country": "Lithuania",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "Amanita Muscaria",
+    "Email": "info@forestamanita.com"
+  },
+  {
+    "name": "GoPure",
+    "url": "https://gopure.shop/",
+    "description": "Wide range of Kratom products and strains. Worldwide shipping.",
+    "country": "Netherlands",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "kratom, live plants",
+    "Email": "support@gopure.shop"
   },
   {
     "name": "I Am Shaman",
@@ -110,6 +180,26 @@
     "Email": "info@maya-ethnobotanicals.com"
   },
   {
+    "name": "Mitra Genie Kratom",
+    "url": "https://mitrageniekratom.com/shop/",
+    "description": "Great variety of multi-strain packs of Kratom, perfect for people who like to cycle through different strains.",
+    "country": "Netherlands",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "kratom",
+    "Email": "support@mitrageniekratom.com"
+  },
+  {
+    "name": "MN Nice Botanicals",
+    "url": "https://mn-nice-ethnobotanicals.com/",
+    "description": "The most intriguing and beneficial ethnobotanicals Gaia has to offer.",
+    "country": "USA",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "Amanita Muscaria, ayahuasca, ethnobotanicals",
+    "Email": "Support@mnniceethno.com"
+  },
+  {
     "name": "My Growing Company",
     "url": "https://mgc.to/",
     "description": "Very interesting brand dedicated to the distribution of CBD cannabis - “an example of creativity and innovation”.",
@@ -118,6 +208,16 @@
     "coupon": 0,
     "tags": "cannabinoids",
     "Email": "info@mgc.team"
+  },
+  {
+    "name": "Ontario Amanita",
+    "url": "https://ontarioamanita.wordpress.com/",
+    "description": "Wild foraged in Southern Ontario Canada. Only available during season. Order through email.",
+    "country": "Canada",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "Amanita Muscaria",
+    "Email": ""
   },
   {
     "name": "Phytoextractum",
@@ -138,6 +238,16 @@
     "coupon": 0,
     "tags": "Salvia Divinorum",
     "Email": "support@salvia-express.nl"
+  },
+  {
+    "name": "Shamanita",
+    "url": "https://amanitamarket.com/",
+    "description": "Amanita Market and a little more.",
+    "country": "Germany",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "Amanita Muscaria, superfoods",
+    "Email": "infoamanitamarket@gmail.com"
   },
   {
     "name": "Shamans Garden",
@@ -168,6 +278,26 @@
     "coupon": 0,
     "tags": "ayahuasca, ethnobotanicals, herbs, shaman, superfoods",
     "Email": "admin@wakingherbs.com"
+  },
+  {
+    "name": "World Fly Agaric - Musmor",
+    "url": "worldflyagaric.com",
+    "description": "Dried Amanita Muscaria for sale. Shipping worldwide.",
+    "country": "Lithuania",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "Amanita Muscaria",
+    "Email": ""
+  },
+  {
+    "name": "Your Amanita UK",
+    "url": "https://youramanita.co.uk/",
+    "description": "Amanita art/potpourri - blue lotus - extracts - health mushrooms – tinctures - cups - and so much more.",
+    "country": "United Kingdom",
+    "sponsor": 0,
+    "coupon": 0,
+    "tags": "Amanita Muscaria, cannabinoids, ethnobotanicals, superfoods",
+    "Email": "Shop@youramanita.co.uk"
   },
   {
     "name": "Zamnesia",
