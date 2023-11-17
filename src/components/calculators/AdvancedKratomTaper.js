@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
 import styles from "./AdvancedKratomTaper.module.css";
+import all, { DailyDosageBox, NoData, PatternChooser } from "./kratomTaper/TaperComponents"
 
 function AdvancedKratomTaper() {
     const [dosage, setDosage] = React.useState(0)
@@ -7,12 +8,12 @@ function AdvancedKratomTaper() {
     const [pattern, setPattern] = React.useState("easier")
     const [schedule, setSchedule] = React.useState([])
     const [cycle, setCycle] = React.useState(7)
+    const [split, setSplit] = React.useState(5)
 
 
     useEffect(() => {
-        setSchedule(createSchedule(dosage, pattern))
-        console.log(schedule)
-    }, [pattern, dosage])
+        setSchedule(createSchedule(dosage, pattern, cycle))
+    }, [pattern, dosage, cycle])
 
     useEffect(() => {
         const timeoutId = setTimeout(() => setDosage(tempDosage * 10), 100)
@@ -37,15 +38,12 @@ function AdvancedKratomTaper() {
                         lastWeek = i;
                     }
                     currentWeek = Math.ceil(i)
-                    console.log(lastWeek, currentWeek)
                     if((lastWeek - currentWeek) < 10) {
-                        console.log("lower than 1g")
                         i = (lastWeek - 10)
 
-                        scheduleArr.push(i)
+                        scheduleArr.push(...createCycle(i, cycle))
                     } else {
-                        console.log("higher than 1g")
-                        scheduleArr.push(currentWeek)
+                        scheduleArr.push(...createCycle(currentWeek, cycle))
                     }
                     weeks += 1
                 }
@@ -59,13 +57,10 @@ function AdvancedKratomTaper() {
                         lastWeek = i;
                     }
                     currentWeek = Math.ceil(i)
-                    console.log(lastWeek, currentWeek)
                     if((lastWeek - currentWeek) < 10) {
-                        console.log("lower than 1g")
                         i = (lastWeek - 10)
                         scheduleArr.push(i)
                     } else {
-                        console.log("higher than 1g")
                         scheduleArr.push(currentWeek)
                     }
 
@@ -80,13 +75,10 @@ function AdvancedKratomTaper() {
                         lastWeek = i;
                     }
                     currentWeek = Math.ceil(i)
-                    console.log(lastWeek, currentWeek)
                     if((lastWeek - currentWeek) < 10) {
-                        console.log("lower than 1g")
                         i = (lastWeek - 10)
                         scheduleArr.push(i)
                     } else {
-                        console.log("higher than 1g")
                         scheduleArr.push(currentWeek)
                     }
                 }
@@ -117,7 +109,8 @@ function AdvancedKratomTaper() {
     // Return integer
     function kratomLeft(scheduleArr, index) {
         var sum = 0;
-        for(var i = index; i <= scheduleArr.length; i++) {
+        for(var i = index+1; i < scheduleArr.length; i++) {
+            console.log("here", scheduleArr[i])
             sum += scheduleArr[i]
         }
         return sum
@@ -133,18 +126,16 @@ function AdvancedKratomTaper() {
     function splitDose(dose, amount) {
         // create dosage array and fill it with zeros
         const dosageArr = Array(amount).fill(0)
-        console.log('first', dosageArr)
         var singleDosage
-        if(dose % amount == 0) {
+        if(dose % amount === 0) {
             singleDosage = dose / amount
             dosageArr.fill(singleDosage)
         } else {
             var reminder = dose % amount;
-            console.log('reminder', reminder)
             singleDosage = (dose - reminder) / amount
             dosageArr.fill(singleDosage)
-            if(reminder == singleDosage) {
-                if(reminder % 2 == 0) {
+            if(reminder === singleDosage) {
+                if(reminder % 2 === 0) {
                     dosageArr[0] = singleDosage + (reminder / 2)
                     dosageArr[dosageArr.length -1] = singleDosage + (reminder / 2)
                 }
@@ -153,9 +144,9 @@ function AdvancedKratomTaper() {
         }
         return dosageArr
     }
-
+    
     // Filling whole cycle (3, 5, 7)
-
+    
     function createCycle(dose, cycle) {
         const cycleArray = []
         for(var i = 1; i <= cycle; i++) {
@@ -163,8 +154,53 @@ function AdvancedKratomTaper() {
         }
         return cycleArray;
     }
+    
+    // RENDERING RESULTS:
+    const SingleDay = (props) => {
+        return (
+            <div className={styles.singleDay}>
+               <h2 className={styles.day}>Day {props.index + 1} </h2>
+               {splitDose(props.dosage, split).map((d,i) =>  
+               <RenderSplitDosage d={d} i={i}/> )}
+               <p className={styles.dailyTotal}><span>daily total: </span>{props.dosage / 10}g</p>
+               <div className={styles.calculations}>
+                <h4 className={styles.calculationsTitle}>Kratom</h4>
+                    <span>used: </span>
+                    {kratomSoFar(schedule, props.index) /10}g / {kratomTotal(schedule) / 10}g
+                    <span>still required: </span>
+                    {kratomLeft(schedule, props.index) / 10}g
+                </div>
+            </div>
+        )
+    }
 
-    console.log(splitDose(9, 3))
+    const Results = (props) => {
+        return (
+            <div></div>
+        )
+    }
+
+    const RenderSplitDosage = (props) => {
+        return (
+            <div className={styles.splitDoseMain}>
+                <p>Dose # {props.i+1}: {props.d/10}g </p><div className={styles.checkbox}></div>
+            </div>
+        )
+    }
+
+    // ..:: CONSOLE LOGS - START ::..
+    //console.log(schedule)
+    // ..:: CONSOLE LOGS - END ::..
+    
+    
+    return (
+        <div className={styles.main}>
+            <DailyDosageBox grabDosage={grabDosage} tempDosage={tempDosage} />
+            <PatternChooser setPattern={setPattern} />
+            <div className={styles.schedule}>
+            {schedule.length > 0 ? schedule.map((d,i) => <SingleDay index={i} dosage={d} />) : <NoData />}
+            </div>
+    </div>
+)
 }
-
 export default AdvancedKratomTaper;

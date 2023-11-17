@@ -1,0 +1,97 @@
+.main {
+}
+
+@media (min-width: 300px) {
+    .schedule {grid-template-columns: repeat(2, 1fr);}
+}
+
+@media (min-width: 400px) {
+    .schedule {grid-template-columns: repeat(3, 1fr);}
+    .singleDay {min-width: 120px;}
+}
+
+@media (min-width: 600px) {
+    .schedule {grid-template-columns: repeat(4, 1fr);}
+    .singleDay {min-width: 135px;}
+}
+
+@media (min-width: 800px) {
+    .schedule {grid-template-columns: repeat(5, 1fr);}
+    .singleDay {min-width: 144px;}
+}
+
+@media (min-width: 1000px) {
+    .schedule {grid-template-columns: repeat(6, 1fr);}
+    .singleDay {min-width: 150px;}
+}
+
+@media (min-width: 1200px) {
+    .schedule {grid-template-columns: repeat(7, 1fr);}
+    .singleDay {min-width: 154px; max-width: max-content;}
+}
+
+.schedule {
+    display: grid;
+    max-width: max-content;
+    margin: 0 auto;
+}
+
+.singleDay {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    padding: 5px;
+    font-size: 85%;
+}
+
+.splitDoseMain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.splitDoseMain > p {
+    border-bottom: 1px solid black;
+}
+
+.dailyTotal {
+    margin: 0;
+    border-bottom: 1px solid black;
+}
+
+.day {
+    text-align: center;
+}
+
+.splitDoseMain > p {
+    margin: 0;
+    font-size: 80%;
+}
+
+.checkbox {
+    background-color: white;
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 2px;
+}
+
+.calculations {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    padding: 0 2px;
+    font-size: 80%;
+    text-align: center;
+}
+
+.calculationsTitle {
+    font-size: 110%;
+    text-align: center;
+    margin: 5px;
+    border-bottom: 1px solid black;
+}
+

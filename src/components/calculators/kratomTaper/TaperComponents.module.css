@@ -1,0 +1,127 @@
+:root {
+  --bg-color: rgba(19, 23, 44, 1);
+  --cardbg-color: rgba(223, 224, 227, 0.05);
+  --cardborder-color: rgba(223, 224, 227, 1);
+  --text-color: rgba(223, 224, 227, 1);
+  --transparent-blue: rgba(0, 0, 256, 0.25)
+}
+
+.main {
+    max-width: 80vw;
+    width: fit-content;
+    min-width: 30vw;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+    padding: 0 10px;
+}
+
+.inputBox {
+    text-align: center;
+}
+
+.dosageInput {
+    width: 30px;
+    padding: 10px;
+    text-align: right;
+    margin: 0 5px;
+}
+
+.patternsLabel {
+    text-align: center;
+}
+
+.chosenPattern {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.row {
+    border-bottom: 1px solid var(--cardborder-color);
+    margin-block: 2.5px;
+    padding: 0 10px;
+}
+
+.lastColumn {
+    text-align: right;
+}
+
+.lastRow {
+    text-align: center;
+    font-size: 80%;
+}
+
+.noData {
+    text-align: center;
+    font-size: 120%;
+    border: 1px solid orange;
+    padding: 5px 0;
+}
+
+.results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 80vw;
+    width: fit-content;
+    min-width: 50vw;
+    margin: 0 auto;
+    border: 1px solid white;
+    border-bottom: none;
+}
+
+.header, .lastHeader, .lastRow {
+    background-color: white;
+    color: black;
+    padding: 2.5px 5px;
+    letter-spacing: 2px;
+}
+
+.lastHeader {
+    text-align: right;
+}
+
+
+
+.easyBTN, .regularBTN, .hardBTN {
+    border: 1px solid var(--cardborder-color);
+    font-weight: 700;
+    padding: 5px;
+    font-size: 120%;
+    letter-spacing: 2px;
+}
+
+.easyBTN {
+    background-color: aqua;
+}
+
+.regularBTN {
+    background-color: blueviolet;
+}
+
+.hardBTN {
+    background-color: darkblue;
+    color: var(--text-color);
+}
+
+.patterns {
+    display: flex;
+    justify-content: space-evenly;
+    margin-block: 10px;
+}
+
+.disclaimer {
+    font-size: 70%;
+    border: 1px solid var(--cardborder-color);
+    padding: 5px 0 5px 10px;
+}
+
+.disclaimer > p {
+    margin: 1px;
+}
+
+.link {
+    color: orange;
+}
+
+.link:hover {
+    background-color: blue;
+}
