@@ -9,10 +9,14 @@ function AdvancedKratomTaper() {
     const [schedule, setSchedule] = React.useState([])
     const [cycle, setCycle] = React.useState(7)
     const [split, setSplit] = React.useState(5)
+    // State: pregen; gen, error
+    const [state, setState] = React.useState('pregen')
 
 
     useEffect(() => {
-        setSchedule(createSchedule(dosage, pattern, cycle))
+        if(state === 'gen') {
+            setSchedule(createSchedule(dosage, pattern, cycle))
+        }
     }, [pattern, dosage, cycle])
 
     useEffect(() => {

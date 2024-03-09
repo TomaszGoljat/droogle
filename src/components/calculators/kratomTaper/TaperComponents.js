@@ -121,3 +121,8 @@ export function PatternChooser(props) {
         </> 
         )
 }
+
+
+export function GenerateBtn(props) {
+    return <button className={styles.generateBTN} onClick={() => props.setState("gen")}>Generate</button>
+}

@@ -79,6 +79,7 @@ export default function PlateauDXM() {
            <div className="pDXM--disclaimer">
                 <p>* combination of suggested dosage</p>
                 <p>** LD50 for DXM is still not confirmed</p>
+                <p className="redEmphasis">These dosages are as DXM hydrobromide</p>
                 </div>
             </div>
             <div className="pDXM--source">
