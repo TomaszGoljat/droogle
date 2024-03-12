@@ -130,7 +130,7 @@ function KratomTaper() {
    const Disclaimer = () => {
     return (
     <div className={styles.disclaimer}>
-        <p>For more information about this calculator read <a href="https://ko-fi.com/unharmed" className={styles.link} target="_blank" rel="noreferrer">this post</a>.</p>
+        <p>For more information about this calculator read <a href="https://ko-fi.com/post/New-tool-on-website-Kratom-Taper-R5R6QR169" className={styles.link} target="_blank" rel="noreferrer">this post</a>.</p>
         <p>Good luck, you can do it!</p>
         <p>Stay unharmed.</p>
     </div>

@@ -43,12 +43,12 @@ export function Disclaimer(props) {
     switch (props.type) {
         default:
         case "simple":
-            paragraphs.push(<p>For more information about this calculator read <a href="https://ko-fi.com/unharmed" className={styles.link} target="_blank" rel="noreferrer">this post</a>.</p>)
+            paragraphs.push(<p>For more information about this calculator read <a href="https://ko-fi.com/post/New-tool-on-website-Kratom-Taper-R5R6QR169" className={styles.link} target="_blank" rel="noreferrer">this post</a>.</p>)
             // TODO: Add link to advanced calculator.
         break;
         case "advanced":
             // TODO: Change link to different post. 
-            paragraphs.push(<p>For more information about this calculator read <a href="https://ko-fi.com/unharmed" className={styles.link} target="_blank" rel="noreferrer">this post</a>.</p>)
+            paragraphs.push(<p>For more information about this calculator read <a href="https://ko-fi.com/post/New-tool-on-website-Kratom-Taper-R5R6QR169" className={styles.link} target="_blank" rel="noreferrer">this post</a>.</p>)
         break;
         }
         paragraphs.push(<p>Good luck, you can do it!</p>)
