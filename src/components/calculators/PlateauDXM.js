@@ -10,7 +10,8 @@ export default function PlateauDXM() {
     const [result, setResult] = React.useState([[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]])
 
     function grabWeight(event) {
-        unit === 'kg' ? setTempWeight(event.target.value) : setTempWeight(Math.round(event.target.value*0.45))
+        //unit === 'kg' ? setTempWeight(event.target.value) : setTempWeight(Math.round(event.target.value*0.45))
+        setTempWeight(event.target.value)
     }
 
     useEffect(() => {
